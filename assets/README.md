@@ -1,0 +1,1 @@
+This folder contains assets (images) used for readmes or during building (e.g., icons).

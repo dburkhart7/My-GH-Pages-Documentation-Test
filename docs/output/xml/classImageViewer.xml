@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classImageViewer" kind="class" language="C++" prot="public">
+    <compoundname>ImageViewer</compoundname>
+    <basecompoundref refid="classGenericNode" prot="public" virt="non-virtual">GenericNode</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classImageViewer_1ab6a672bdb9bac0929eccc6190cfbf565" prot="private" static="no" mutable="no">
+        <type>unique_ptr&lt; zmq::socket_t &gt;</type>
+        <definition>unique_ptr&lt;zmq::socket_t&gt; ImageViewer::socket_</definition>
+        <argsstring></argsstring>
+        <name>socket_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/image_viewer.cpp" line="60" column="16" bodyfile="cpp/src/image_viewer.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classImageViewer_1a968687d70a4f15be8442212da98ad36b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ImageViewer::ImageViewer</definition>
+        <argsstring>()</argsstring>
+        <name>ImageViewer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/image_viewer.cpp" line="9" column="5" bodyfile="cpp/src/image_viewer.cpp" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classImageViewer_1a3202bf6e475d1711513f6cffd4b4294f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImageViewer::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/image_viewer.cpp" line="15" column="10" bodyfile="cpp/src/image_viewer.cpp" bodystart="15" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>ImageViewer</label>
+        <link refid="classImageViewer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>ImageViewer</label>
+        <link refid="classImageViewer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpp/src/image_viewer.cpp" line="7" column="1" bodyfile="cpp/src/image_viewer.cpp" bodystart="7" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>debug</name></member>
+      <member refid="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>GenericNode</name></member>
+      <member refid="classGenericNode_1a1918a462ad509408d106dc2f16f4098e" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>get_topic_endpoint</name></member>
+      <member refid="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>HEARTBEAT_INTERVAL_MS</name></member>
+      <member refid="classImageViewer_1a968687d70a4f15be8442212da98ad36b" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>ImageViewer</name></member>
+      <member refid="classGenericNode_1af284220e094418653d56602cd814b5fa" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>init_generic_node</name></member>
+      <member refid="classGenericNode_1ac623c64fa2b52e6bb691514131abb634" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>init_logger</name></member>
+      <member refid="classGenericNode_1a0b4c39692f2000316497c6ab0bece455" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>log_debug_message</name></member>
+      <member refid="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>log_error_message</name></member>
+      <member refid="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>log_info_message</name></member>
+      <member refid="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>log_warning_message</name></member>
+      <member refid="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_alignment_log_name</name></member>
+      <member refid="classGenericNode_1aa27223e1b038135e6282aa8e7e761371" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_alignment_logger</name></member>
+      <member refid="classGenericNode_1af8941aa44d925217f1da44dd44fa3015" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_atomic_stop</name></member>
+      <member refid="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_cns_ip</name></member>
+      <member refid="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_cns_port</name></member>
+      <member refid="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_cns_socket</name></member>
+      <member refid="classGenericNode_1a55ce54bd02552925d45ac68561808783" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_context</name></member>
+      <member refid="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_ip_address</name></member>
+      <member refid="classGenericNode_1a63135279a6744c7fc14e445532a3fada" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_log_name</name></member>
+      <member refid="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_logger</name></member>
+      <member refid="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_node_id</name></member>
+      <member refid="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_node_type</name></member>
+      <member refid="classGenericNode_1aacf77c74031365e41f51871a4c300c04" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_registered_topics</name></member>
+      <member refid="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_threads</name></member>
+      <member refid="classGenericNode_1a74d99ba181d746b467ba767fd93817af" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>m_topic</name></member>
+      <member refid="classGenericNode_1a7443513267797a239b43d3e0eb94a004" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>mtx</name></member>
+      <member refid="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>publish_heartbeat</name></member>
+      <member refid="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>register_service</name></member>
+      <member refid="classImageViewer_1a3202bf6e475d1711513f6cffd4b4294f" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>run</name></member>
+      <member refid="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>send_req_cns</name></member>
+      <member refid="classGenericNode_1a89a166641de55fe564ae2a517b2053f9" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>set_debug</name></member>
+      <member refid="classGenericNode_1a42caa921663417c7a2d48fef594a5d88" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>set_log_filter_level_json</name></member>
+      <member refid="classGenericNode_1a5d0f994908063b6869f602b84a29c226" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>setup_cns_socket</name></member>
+      <member refid="classGenericNode_1af1950452c0bedf0140c9db99896dd2e5" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>setup_publisher</name></member>
+      <member refid="classGenericNode_1a272ee40ff6793a21b792018f0cbf8ceb" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>setup_subscriber</name></member>
+      <member refid="classImageViewer_1ab6a672bdb9bac0929eccc6190cfbf565" prot="private" virt="non-virtual"><scope>ImageViewer</scope><name>socket_</name></member>
+      <member refid="classGenericNode_1aa8638ff36e27afbcf26d392496537b94" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>start_frame_drop</name></member>
+      <member refid="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>unregister_all_services</name></member>
+      <member refid="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99" prot="protected" virt="non-virtual"><scope>ImageViewer</scope><name>unregister_service</name></member>
+      <member refid="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a" prot="public" virt="non-virtual"><scope>ImageViewer</scope><name>~GenericNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

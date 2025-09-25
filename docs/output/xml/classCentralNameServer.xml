@@ -1,0 +1,294 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCentralNameServer" kind="class" language="C++" prot="public">
+    <compoundname>CentralNameServer</compoundname>
+    <basecompoundref refid="classGenericNode" prot="public" virt="non-virtual">GenericNode</basecompoundref>
+    <includes refid="cns_8hpp" local="no">cns.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCentralNameServer_1aad22450317250eade609c5145b054b63" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CentralNameServer::m_port</definition>
+        <argsstring></argsstring>
+        <name>m_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="26" column="13" bodyfile="cpp/src/name_server/cns.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCentralNameServer_1aaecb0d81eda8fcf3bcdc34c0e890b792" prot="private" static="no" mutable="no">
+        <type>zmq::socket_t</type>
+        <definition>zmq::socket_t CentralNameServer::m_socket</definition>
+        <argsstring></argsstring>
+        <name>m_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="27" column="23" bodyfile="cpp/src/name_server/cns.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCentralNameServer_1adb8594c7c3f06e685c6b3c7c0ffb01e1" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string CentralNameServer::m_log_name</definition>
+        <argsstring></argsstring>
+        <name>m_log_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="28" column="16" bodyfile="cpp/src/name_server/cns.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCentralNameServer_1aa11885b99f180466c7c4b39c03d391fd" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structNodeInfo" kindref="compound">NodeInfo</ref> &gt;</type>
+        <definition>vector&lt;NodeInfo&gt; CentralNameServer::m_registered_nodes</definition>
+        <argsstring></argsstring>
+        <name>m_registered_nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="29" column="16" bodyfile="cpp/src/name_server/cns.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCentralNameServer_1a02209d5f81ab18853560568a73a74e74" prot="private" static="no" mutable="no">
+        <type>map&lt; string, string &gt;</type>
+        <definition>map&lt;string, string&gt; CentralNameServer::m_registered_topics</definition>
+        <argsstring></argsstring>
+        <name>m_registered_topics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="30" column="13" bodyfile="cpp/src/name_server/cns.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCentralNameServer_1a82261ef2e981b9e2ab504a4c8d0ff60f" prot="private" static="no" mutable="no">
+        <type>map&lt; string, string &gt;</type>
+        <definition>map&lt;string, string&gt; CentralNameServer::m_data_storage</definition>
+        <argsstring></argsstring>
+        <name>m_data_storage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="31" column="13" bodyfile="cpp/src/name_server/cns.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCentralNameServer_1ae64885962b2b20da4649635f4f586ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CentralNameServer::CentralNameServer</definition>
+        <argsstring>(string ip_address, int port, string master_ip_address)</argsstring>
+        <name>CentralNameServer</name>
+        <param>
+          <type>string</type>
+          <declname>ip_address</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>master_ip_address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="34" column="9" bodyfile="cpp/src/name_server/cns.cpp" bodystart="8" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1a79789499c1f02bc22b54bfd8447b27d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CentralNameServer::~CentralNameServer</definition>
+        <argsstring>()</argsstring>
+        <name>~CentralNameServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="35" column="9" bodyfile="cpp/src/name_server/cns.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1abcde224db9cee7f09e71721e8db1cb60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentralNameServer::register_node</definition>
+        <argsstring>(string topic, string ip_address, int port)</argsstring>
+        <name>register_node</name>
+        <param>
+          <type>string</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ip_address</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="37" column="14" bodyfile="cpp/src/name_server/cns.cpp" bodystart="23" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1a7f633dad0caf3941210d8669170aa85f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentralNameServer::unregister_node</definition>
+        <argsstring>(string topic)</argsstring>
+        <name>unregister_node</name>
+        <param>
+          <type>string</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="38" column="14" bodyfile="cpp/src/name_server/cns.cpp" bodystart="36" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1a794cf43ac38057ee28741473581446da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentralNameServer::reply_loop</definition>
+        <argsstring>()</argsstring>
+        <name>reply_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="39" column="14" bodyfile="cpp/src/name_server/cns.cpp" bodystart="45" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1a1794d19870fe90d715d4512e8b68698e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CentralNameServer::validate_request</definition>
+        <argsstring>(nlohmann::json request)</argsstring>
+        <name>validate_request</name>
+        <param>
+          <type><ref refid="node_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d" kindref="member">nlohmann::json</ref></type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Expected format: { &quot;action&quot;: &quot;register&quot; | &quot;unregister&quot; | &quot;lookup&quot;, &quot;topic&quot;: &quot;/kinect/0/depth&quot;, &quot;ip_address&quot;: &quot;127.0.0.1&quot;, &quot;port&quot;: 5001 }</para>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="41" column="14" bodyfile="cpp/src/name_server/cns.cpp" bodystart="202" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classCentralNameServer_1a82d820b33de2282f8313b7883ecd2969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CentralNameServer::clear_registry</definition>
+        <argsstring>()</argsstring>
+        <name>clear_registry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/name_server/cns.hpp" line="42" column="14" bodyfile="cpp/src/name_server/cns.cpp" bodystart="250" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>CentralNameServer</label>
+        <link refid="classCentralNameServer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>CentralNameServer</label>
+        <link refid="classCentralNameServer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpp/src/name_server/cns.hpp" line="24" column="1" bodyfile="cpp/src/name_server/cns.hpp" bodystart="24" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classCentralNameServer_1ae64885962b2b20da4649635f4f586ea3" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>CentralNameServer</name></member>
+      <member refid="classCentralNameServer_1a82d820b33de2282f8313b7883ecd2969" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>clear_registry</name></member>
+      <member refid="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>debug</name></member>
+      <member refid="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>GenericNode</name></member>
+      <member refid="classGenericNode_1a1918a462ad509408d106dc2f16f4098e" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>get_topic_endpoint</name></member>
+      <member refid="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>HEARTBEAT_INTERVAL_MS</name></member>
+      <member refid="classGenericNode_1af284220e094418653d56602cd814b5fa" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>init_generic_node</name></member>
+      <member refid="classGenericNode_1ac623c64fa2b52e6bb691514131abb634" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>init_logger</name></member>
+      <member refid="classGenericNode_1a0b4c39692f2000316497c6ab0bece455" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>log_debug_message</name></member>
+      <member refid="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>log_error_message</name></member>
+      <member refid="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>log_info_message</name></member>
+      <member refid="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>log_warning_message</name></member>
+      <member refid="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_alignment_log_name</name></member>
+      <member refid="classGenericNode_1aa27223e1b038135e6282aa8e7e761371" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_alignment_logger</name></member>
+      <member refid="classGenericNode_1af8941aa44d925217f1da44dd44fa3015" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_atomic_stop</name></member>
+      <member refid="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_cns_ip</name></member>
+      <member refid="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_cns_port</name></member>
+      <member refid="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_cns_socket</name></member>
+      <member refid="classGenericNode_1a55ce54bd02552925d45ac68561808783" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_context</name></member>
+      <member refid="classCentralNameServer_1a82261ef2e981b9e2ab504a4c8d0ff60f" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_data_storage</name></member>
+      <member refid="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_ip_address</name></member>
+      <member refid="classCentralNameServer_1adb8594c7c3f06e685c6b3c7c0ffb01e1" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_log_name</name></member>
+      <member refid="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_logger</name></member>
+      <member refid="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_node_id</name></member>
+      <member refid="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_node_type</name></member>
+      <member refid="classCentralNameServer_1aad22450317250eade609c5145b054b63" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_port</name></member>
+      <member refid="classCentralNameServer_1aa11885b99f180466c7c4b39c03d391fd" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_registered_nodes</name></member>
+      <member refid="classCentralNameServer_1a02209d5f81ab18853560568a73a74e74" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_registered_topics</name></member>
+      <member refid="classCentralNameServer_1aaecb0d81eda8fcf3bcdc34c0e890b792" prot="private" virt="non-virtual"><scope>CentralNameServer</scope><name>m_socket</name></member>
+      <member refid="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_threads</name></member>
+      <member refid="classGenericNode_1a74d99ba181d746b467ba767fd93817af" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>m_topic</name></member>
+      <member refid="classGenericNode_1a7443513267797a239b43d3e0eb94a004" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>mtx</name></member>
+      <member refid="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>publish_heartbeat</name></member>
+      <member refid="classCentralNameServer_1abcde224db9cee7f09e71721e8db1cb60" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>register_node</name></member>
+      <member refid="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>register_service</name></member>
+      <member refid="classCentralNameServer_1a794cf43ac38057ee28741473581446da" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>reply_loop</name></member>
+      <member refid="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>send_req_cns</name></member>
+      <member refid="classGenericNode_1a89a166641de55fe564ae2a517b2053f9" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>set_debug</name></member>
+      <member refid="classGenericNode_1a42caa921663417c7a2d48fef594a5d88" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>set_log_filter_level_json</name></member>
+      <member refid="classGenericNode_1a5d0f994908063b6869f602b84a29c226" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>setup_cns_socket</name></member>
+      <member refid="classGenericNode_1af1950452c0bedf0140c9db99896dd2e5" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>setup_publisher</name></member>
+      <member refid="classGenericNode_1a272ee40ff6793a21b792018f0cbf8ceb" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>setup_subscriber</name></member>
+      <member refid="classGenericNode_1aa8638ff36e27afbcf26d392496537b94" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>start_frame_drop</name></member>
+      <member refid="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>unregister_all_services</name></member>
+      <member refid="classCentralNameServer_1a7f633dad0caf3941210d8669170aa85f" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>unregister_node</name></member>
+      <member refid="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99" prot="protected" virt="non-virtual"><scope>CentralNameServer</scope><name>unregister_service</name></member>
+      <member refid="classCentralNameServer_1a1794d19870fe90d715d4512e8b68698e" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>validate_request</name></member>
+      <member refid="classCentralNameServer_1a79789499c1f02bc22b54bfd8447b27d9" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>~CentralNameServer</name></member>
+      <member refid="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a" prot="public" virt="non-virtual"><scope>CentralNameServer</scope><name>~GenericNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

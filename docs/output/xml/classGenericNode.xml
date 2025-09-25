@@ -1,0 +1,803 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classGenericNode" kind="class" language="C++" prot="public">
+    <compoundname>GenericNode</compoundname>
+    <derivedcompoundref refid="classCentralNameServer" prot="public" virt="non-virtual">CentralNameServer</derivedcompoundref>
+    <derivedcompoundref refid="classImageViewer" prot="public" virt="non-virtual">ImageViewer</derivedcompoundref>
+    <derivedcompoundref refid="classKinectAzureFrameProducer" prot="public" virt="non-virtual">KinectAzureFrameProducer</derivedcompoundref>
+    <includes refid="node_8hpp" local="no">node.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_node_type</definition>
+        <argsstring></argsstring>
+        <name>m_node_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="40" column="16" bodyfile="cpp/src/node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_node_id</definition>
+        <argsstring></argsstring>
+        <name>m_node_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="41" column="16" bodyfile="cpp/src/node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a55ce54bd02552925d45ac68561808783" prot="protected" static="no" mutable="no">
+        <type>zmq::context_t</type>
+        <definition>zmq::context_t GenericNode::m_context</definition>
+        <argsstring></argsstring>
+        <name>m_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="43" column="24" bodyfile="cpp/src/node.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe" prot="protected" static="no" mutable="no">
+        <type>zmq::socket_t</type>
+        <definition>zmq::socket_t GenericNode::m_cns_socket</definition>
+        <argsstring></argsstring>
+        <name>m_cns_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="44" column="23" bodyfile="cpp/src/node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a74d99ba181d746b467ba767fd93817af" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_topic</definition>
+        <argsstring></argsstring>
+        <name>m_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="45" column="16" bodyfile="cpp/src/node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_cns_ip</definition>
+        <argsstring></argsstring>
+        <name>m_cns_ip</name>
+        <initializer>= &quot;127.0.0.1&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="48" column="16" bodyfile="cpp/src/node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GenericNode::m_cns_port</definition>
+        <argsstring></argsstring>
+        <name>m_cns_port</name>
+        <initializer>= 5555</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="49" column="13" bodyfile="cpp/src/node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1aacf77c74031365e41f51871a4c300c04" prot="protected" static="no" mutable="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>vector&lt;string&gt; GenericNode::m_registered_topics</definition>
+        <argsstring></argsstring>
+        <name>m_registered_topics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="50" column="16" bodyfile="cpp/src/node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3" prot="protected" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int GenericNode::HEARTBEAT_INTERVAL_MS</definition>
+        <argsstring></argsstring>
+        <name>HEARTBEAT_INTERVAL_MS</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="53" column="19" bodyfile="cpp/src/node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1af8941aa44d925217f1da44dd44fa3015" prot="protected" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; GenericNode::m_atomic_stop</definition>
+        <argsstring></argsstring>
+        <name>m_atomic_stop</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="56" column="21" bodyfile="cpp/src/node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a7443513267797a239b43d3e0eb94a004" prot="protected" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex GenericNode::mtx</definition>
+        <argsstring></argsstring>
+        <name>mtx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="57" column="20" bodyfile="cpp/src/node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc" prot="protected" static="no" mutable="no">
+        <type>vector&lt; thread &gt;</type>
+        <definition>vector&lt;thread&gt; GenericNode::m_threads</definition>
+        <argsstring></argsstring>
+        <name>m_threads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="59" column="16" bodyfile="cpp/src/node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112" prot="protected" static="no" mutable="no">
+        <type>quill::Logger *</type>
+        <definition>quill::Logger* GenericNode::m_logger</definition>
+        <argsstring></argsstring>
+        <name>m_logger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="60" column="23" bodyfile="cpp/src/node.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1aa27223e1b038135e6282aa8e7e761371" prot="protected" static="no" mutable="no">
+        <type>quill::Logger *</type>
+        <definition>quill::Logger* GenericNode::m_alignment_logger</definition>
+        <argsstring></argsstring>
+        <name>m_alignment_logger</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="61" column="23" bodyfile="cpp/src/node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GenericNode::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="62" column="14" bodyfile="cpp/src/node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a63135279a6744c7fc14e445532a3fada" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_log_name</definition>
+        <argsstring></argsstring>
+        <name>m_log_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="63" column="16" bodyfile="cpp/src/node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_alignment_log_name</definition>
+        <argsstring></argsstring>
+        <name>m_alignment_log_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="64" column="16" bodyfile="cpp/src/node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string GenericNode::m_ip_address</definition>
+        <argsstring></argsstring>
+        <name>m_ip_address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="65" column="16" bodyfile="cpp/src/node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::log_info_message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>log_info_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="72" column="14" bodyfile="cpp/src/node.hpp" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a0b4c39692f2000316497c6ab0bece455" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::log_debug_message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>log_debug_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="77" column="14" bodyfile="cpp/src/node.hpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::log_warning_message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>log_warning_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="82" column="14" bodyfile="cpp/src/node.hpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::log_error_message</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>log_error_message</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="87" column="14" bodyfile="cpp/src/node.hpp" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a5d0f994908063b6869f602b84a29c226" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::setup_cns_socket</definition>
+        <argsstring>()</argsstring>
+        <name>setup_cns_socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="93" column="14" bodyfile="cpp/src/node.hpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto GenericNode::send_req_cns</definition>
+        <argsstring>(zmq::message_t &amp;reply, string request_str)</argsstring>
+        <name>send_req_cns</name>
+        <param>
+          <type>zmq::message_t &amp;</type>
+          <declname>reply</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>request_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sends a request/reply message to the cns. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="103" column="14" bodyfile="cpp/src/node.hpp" bodystart="103" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericNode::register_service</definition>
+        <argsstring>(const string &amp;topic, int port)</argsstring>
+        <name>register_service</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registers a topic with the central name server (CNS). The CNS will store the IP address and port number of the topic so that other nodes can find and connect to it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string identifying the topic </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the port number for the service </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the registration was successful, false if not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="125" column="14" bodyfile="cpp/src/node.hpp" bodystart="125" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericNode::unregister_service</definition>
+        <argsstring>(const string &amp;topic)</argsstring>
+        <name>unregister_service</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unregisters a service from the Central Name Server (CNS).</para>
+<para>This function constructs a deregistration request for the given topic and sends it to the CNS. It waits for a reply and checks if the deregistration was successful.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic of the service to be unregistered. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the deregistration was successful, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="162" column="14" bodyfile="cpp/src/node.hpp" bodystart="162" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericNode::unregister_all_services</definition>
+        <argsstring>()</argsstring>
+        <name>unregister_all_services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unregisters all currently registered services from the Central Name Server (CNS).</para>
+<para>This function iterates over all topics stored in m_registered_topics and attempts to unregister each one. If any service fails to unregister, the function returns false immediately. If all services are successfully unregistered, the function returns true.</para>
+<para><simplesect kind="return"><para>true if all services are successfully unregistered, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="197" column="14" bodyfile="cpp/src/node.hpp" bodystart="197" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a272ee40ff6793a21b792018f0cbf8ceb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unique_ptr&lt; zmq::socket_t &gt;</type>
+        <definition>unique_ptr&lt;zmq::socket_t&gt; GenericNode::setup_subscriber</definition>
+        <argsstring>(const string &amp;topic)</argsstring>
+        <name>setup_subscriber</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <briefdescription>
+<para>Sets up a subscriber socket to listen on a specific topic. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function contacts the Central Name Server (CNS) to retrieve the IP address and port associated with the specified topic. It then connects the provided subscriber socket to the retrieved endpoint and subscribes to the topic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to subscribe to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_subscriber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ZMQ subscriber socket to be configured.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>std::runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the topic lookup fails. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="220" column="20" bodyfile="cpp/src/node.hpp" bodystart="220" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1af1950452c0bedf0140c9db99896dd2e5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>unique_ptr&lt; zmq::socket_t &gt;</type>
+        <definition>unique_ptr&lt;zmq::socket_t&gt; GenericNode::setup_publisher</definition>
+        <argsstring>(vector&lt; string &gt; topics)</argsstring>
+        <name>setup_publisher</name>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>topics</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="264" column="20" bodyfile="cpp/src/node.hpp" bodystart="264" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a42caa921663417c7a2d48fef594a5d88" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericNode::set_log_filter_level_json</definition>
+        <argsstring>(const json &amp;j, quill::Logger *logger, string name)</argsstring>
+        <name>set_log_filter_level_json</name>
+        <param>
+          <type>const <ref refid="image__viewer_8cpp_1ab701e3ac61a85b337ec5c1abaad6742d" kindref="member">json</ref> &amp;</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>quill::Logger *</type>
+          <declname>logger</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="295" column="14" bodyfile="cpp/src/node.hpp" bodystart="295" bodyend="323"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGenericNode_1af284220e094418653d56602cd814b5fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::init_generic_node</definition>
+        <argsstring>(string node_type, string node_id, string ip_address)</argsstring>
+        <name>init_generic_node</name>
+        <param>
+          <type>string</type>
+          <declname>node_type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>node_id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ip_address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="327" column="14" bodyfile="cpp/src/node.hpp" bodystart="327" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenericNode::GenericNode</definition>
+        <argsstring>(string node_type, string node_id, string ip_address, string m_cns_ip)</argsstring>
+        <name>GenericNode</name>
+        <param>
+          <type>string</type>
+          <declname>node_type</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>node_id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>ip_address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>m_cns_ip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="352" column="9" bodyfile="cpp/src/node.hpp" bodystart="352" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenericNode::~GenericNode</definition>
+        <argsstring>()</argsstring>
+        <name>~GenericNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="357" column="9" bodyfile="cpp/src/node.hpp" bodystart="357" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1ac623c64fa2b52e6bb691514131abb634" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::init_logger</definition>
+        <argsstring>(quill::Logger **logger, string name)</argsstring>
+        <name>init_logger</name>
+        <param>
+          <type>quill::Logger **</type>
+          <declname>logger</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the logger for this node.</para>
+<para>This function sets up a logger with two sinks: a file sink and a console sink. The file sink writes to a file with the name of the node, and the console sink writes to the console. The log level is set to Info unless debug is true, in which case it is set to Debug. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="389" column="14" bodyfile="cpp/src/node.hpp" bodystart="389" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::publish_heartbeat</definition>
+        <argsstring>()</argsstring>
+        <name>publish_heartbeat</name>
+        <briefdescription>
+<para>Publishes a heartbeat message to <computeroutput>/{type}/{id}/heartbeat</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is an infinite loop that publishes a heartbeat message to the CNS at regular intervals. The heartbeat message contains the node type, node ID, and current state of the node. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="416" column="14" bodyfile="cpp/src/node.hpp" bodystart="416" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a89a166641de55fe564ae2a517b2053f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::set_debug</definition>
+        <argsstring>(bool debug)</argsstring>
+        <name>set_debug</name>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="430" column="14" bodyfile="cpp/src/node.hpp" bodystart="430" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1a1918a462ad509408d106dc2f16f4098e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericNode::get_topic_endpoint</definition>
+        <argsstring>(const string &amp;topic, string &amp;endpoint)</argsstring>
+        <name>get_topic_endpoint</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>topic</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>endpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contacts the Parameter server (CNS) to retrieve the IP address and port associated with the specified topic.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to lookup. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The endpoint to be populated with the result. If the topic is not found, the endpoint will be empty. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the topic is found and the endpoint is populated, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="445" column="14" bodyfile="cpp/src/node.hpp" bodystart="445" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classGenericNode_1aa8638ff36e27afbcf26d392496537b94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericNode::start_frame_drop</definition>
+        <argsstring>(zmq::socket_t &amp;sub_socket)</argsstring>
+        <name>start_frame_drop</name>
+        <param>
+          <type>zmq::socket_t &amp;</type>
+          <declname>sub_socket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Drop frames until they start arriving slower than 3ms apart. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/node.hpp" line="483" column="14" bodyfile="cpp/src/node.hpp" bodystart="483" bodyend="535"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classGenericNode" kindref="compound">GenericNode</ref> Test description for a git push as well!!! Every Generic node has the following IO. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><orderedlist>
+<listitem><para>Subscriber to broadcast messages</para>
+</listitem><listitem><para>request socket for CNS lookups (to get a port and register with the CNS)</para>
+</listitem><listitem><para>Publisher to send out messages</para>
+</listitem><listitem><para>Subscriber to receive messages</para>
+</listitem></orderedlist>
+</para>
+<para>Node identification<orderedlist>
+<listitem><para>Node type - [kinect | pcd | saver | UKF | etc]</para>
+</listitem><listitem><para>Node id (random id)</para>
+</listitem><listitem><para>Node name - [kinect_0 | pcd_0 | saver_5 | UKF_3 | etc] </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="3">
+        <label>ImageViewer</label>
+        <link refid="classImageViewer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CentralNameServer</label>
+        <link refid="classCentralNameServer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>KinectAzureFrameProducer</label>
+        <link refid="classKinectAzureFrameProducer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="cpp/src/node.hpp" line="38" column="1" bodyfile="cpp/src/node.hpp" bodystart="38" bodyend="536"/>
+    <listofallmembers>
+      <member refid="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>debug</name></member>
+      <member refid="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>GenericNode</name></member>
+      <member refid="classGenericNode_1a1918a462ad509408d106dc2f16f4098e" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>get_topic_endpoint</name></member>
+      <member refid="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>HEARTBEAT_INTERVAL_MS</name></member>
+      <member refid="classGenericNode_1af284220e094418653d56602cd814b5fa" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>init_generic_node</name></member>
+      <member refid="classGenericNode_1ac623c64fa2b52e6bb691514131abb634" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>init_logger</name></member>
+      <member refid="classGenericNode_1a0b4c39692f2000316497c6ab0bece455" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>log_debug_message</name></member>
+      <member refid="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>log_error_message</name></member>
+      <member refid="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>log_info_message</name></member>
+      <member refid="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>log_warning_message</name></member>
+      <member refid="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_alignment_log_name</name></member>
+      <member refid="classGenericNode_1aa27223e1b038135e6282aa8e7e761371" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_alignment_logger</name></member>
+      <member refid="classGenericNode_1af8941aa44d925217f1da44dd44fa3015" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_atomic_stop</name></member>
+      <member refid="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_cns_ip</name></member>
+      <member refid="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_cns_port</name></member>
+      <member refid="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_cns_socket</name></member>
+      <member refid="classGenericNode_1a55ce54bd02552925d45ac68561808783" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_context</name></member>
+      <member refid="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_ip_address</name></member>
+      <member refid="classGenericNode_1a63135279a6744c7fc14e445532a3fada" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_log_name</name></member>
+      <member refid="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_logger</name></member>
+      <member refid="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_node_id</name></member>
+      <member refid="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_node_type</name></member>
+      <member refid="classGenericNode_1aacf77c74031365e41f51871a4c300c04" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_registered_topics</name></member>
+      <member refid="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_threads</name></member>
+      <member refid="classGenericNode_1a74d99ba181d746b467ba767fd93817af" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>m_topic</name></member>
+      <member refid="classGenericNode_1a7443513267797a239b43d3e0eb94a004" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>mtx</name></member>
+      <member refid="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>publish_heartbeat</name></member>
+      <member refid="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>register_service</name></member>
+      <member refid="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>send_req_cns</name></member>
+      <member refid="classGenericNode_1a89a166641de55fe564ae2a517b2053f9" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>set_debug</name></member>
+      <member refid="classGenericNode_1a42caa921663417c7a2d48fef594a5d88" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>set_log_filter_level_json</name></member>
+      <member refid="classGenericNode_1a5d0f994908063b6869f602b84a29c226" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>setup_cns_socket</name></member>
+      <member refid="classGenericNode_1af1950452c0bedf0140c9db99896dd2e5" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>setup_publisher</name></member>
+      <member refid="classGenericNode_1a272ee40ff6793a21b792018f0cbf8ceb" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>setup_subscriber</name></member>
+      <member refid="classGenericNode_1aa8638ff36e27afbcf26d392496537b94" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>start_frame_drop</name></member>
+      <member refid="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>unregister_all_services</name></member>
+      <member refid="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99" prot="protected" virt="non-virtual"><scope>GenericNode</scope><name>unregister_service</name></member>
+      <member refid="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a" prot="public" virt="non-virtual"><scope>GenericNode</scope><name>~GenericNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

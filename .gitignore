@@ -1,0 +1,45 @@
+# VSCode files
+*.vs
+.vscode
+
+# C++ packages
+*packages
+*x64
+*.onnx
+
+# Python files
+*.pyc
+*__pycache__
+
+# Transformation files 
+*transformation*.txt
+
+# Python environment files
+*env*
+
+# Temp directories
+*temp*
+*_runnable.py
+
+# Calibrations
+calibration*
+recording*
+
+# GUI Logs
+logs/*
+*.log
+
+# Big Files
+*.task
+*.bin
+
+# build files
+*build*
+*dist*
+*build/*
+*dist/*
+*.exe
+*.o
+*.a 
+*.egg-info*
+*.dot

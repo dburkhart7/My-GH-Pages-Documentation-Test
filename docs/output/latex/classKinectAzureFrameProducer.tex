@@ -1,0 +1,148 @@
+\hypertarget{classKinectAzureFrameProducer}{}\doxysection{Kinect\+Azure\+Frame\+Producer Class Reference}
+\label{classKinectAzureFrameProducer}\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+
+
+Inheritance diagram for Kinect\+Azure\+Frame\+Producer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classKinectAzureFrameProducer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Kinect\+Azure\+Frame\+Producer\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classKinectAzureFrameProducer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKinectAzureFrameProducer_aa55b6806072ea3642a63c6a87bf69230}{Kinect\+Azure\+Frame\+Producer}} (const std\+::string \&topic=\mbox{\hyperlink{kinect_8cpp_a2a6ad538f65c525f16ad9b4113a43338}{CAMERA\+\_\+\+TOPIC}}, int port=\mbox{\hyperlink{kinect_8cpp_a1e95172f710bac4c9f55947e22fa6d6e}{CAMERA\+\_\+\+PORT}}, uint32\+\_\+t device\+\_\+index=0, uint32\+\_\+t frame\+\_\+drop=0, bool master=false, bool save\+\_\+images=false, quill\+::\+Logger $\ast$logger=nullptr)
+\item 
+\mbox{\hyperlink{classKinectAzureFrameProducer_add411b7c923ab53f1ffabea357f46d83}{$\sim$\+Kinect\+Azure\+Frame\+Producer}} ()
+\item 
+void \mbox{\hyperlink{classKinectAzureFrameProducer_a6511e2005fbded9197722da9a457935a}{start}} ()
+\item 
+void \mbox{\hyperlink{classKinectAzureFrameProducer_aeef2d034dbb5efdf32d60ee2af176ce1}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classKinectAzureFrameProducer_a1d8cfba4d02690bf8f9837a59e68c183}{capture\+\_\+loop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classKinectAzureFrameProducer_ad4055b776a0642d227ffa84d26119b14}{m\+\_\+kinect\+\_\+topic}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classKinectAzureFrameProducer_a3765ad635f729af123d08853c0571bb2}{device\+\_\+index\+\_\+}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classKinectAzureFrameProducer_ae066d5e171b9969402f0dd7d8caa01f2}{frame\+\_\+drop\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classKinectAzureFrameProducer_a8a8d1b2c82d8bc005365c32c074cd5f2}{save\+\_\+images\+\_\+}}
+\item 
+k4a\+::device \mbox{\hyperlink{classKinectAzureFrameProducer_a81dd4e987c553332c022d62142efb9cf}{device\+\_\+}}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classKinectAzureFrameProducer_a89e76ee63ef1e87c236cdf57c004fe80}{running\+\_\+}} \{false\}
+\item 
+std\+::thread \mbox{\hyperlink{classKinectAzureFrameProducer_a954ad93d777f96d31be7af3430c16d95}{capture\+\_\+thread\+\_\+}}
+\item 
+unique\+\_\+ptr$<$ zmq\+::socket\+\_\+t $>$ \mbox{\hyperlink{classKinectAzureFrameProducer_ae6965992426ca621f0c1d2f629d9c1b9}{socket\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classKinectAzureFrameProducer_aa55b6806072ea3642a63c6a87bf69230}\label{classKinectAzureFrameProducer_aa55b6806072ea3642a63c6a87bf69230}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{KinectAzureFrameProducer()}{KinectAzureFrameProducer()}}
+{\footnotesize\ttfamily Kinect\+Azure\+Frame\+Producer\+::\+Kinect\+Azure\+Frame\+Producer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic = {\ttfamily \mbox{\hyperlink{kinect_8cpp_a2a6ad538f65c525f16ad9b4113a43338}{CAMERA\+\_\+\+TOPIC}}},  }\item[{int}]{port = {\ttfamily \mbox{\hyperlink{kinect_8cpp_a1e95172f710bac4c9f55947e22fa6d6e}{CAMERA\+\_\+\+PORT}}},  }\item[{uint32\+\_\+t}]{device\+\_\+index = {\ttfamily 0},  }\item[{uint32\+\_\+t}]{frame\+\_\+drop = {\ttfamily 0},  }\item[{bool}]{master = {\ttfamily false},  }\item[{bool}]{save\+\_\+images = {\ttfamily false},  }\item[{quill\+::\+Logger $\ast$}]{logger = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_add411b7c923ab53f1ffabea357f46d83}\label{classKinectAzureFrameProducer_add411b7c923ab53f1ffabea357f46d83}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!````~KinectAzureFrameProducer@{$\sim$KinectAzureFrameProducer}}
+\index{````~KinectAzureFrameProducer@{$\sim$KinectAzureFrameProducer}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{$\sim$KinectAzureFrameProducer()}{~KinectAzureFrameProducer()}}
+{\footnotesize\ttfamily Kinect\+Azure\+Frame\+Producer\+::$\sim$\+Kinect\+Azure\+Frame\+Producer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a1d8cfba4d02690bf8f9837a59e68c183}\label{classKinectAzureFrameProducer_a1d8cfba4d02690bf8f9837a59e68c183}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!capture\_loop@{capture\_loop}}
+\index{capture\_loop@{capture\_loop}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{capture\_loop()}{capture\_loop()}}
+{\footnotesize\ttfamily void Kinect\+Azure\+Frame\+Producer\+::capture\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a6511e2005fbded9197722da9a457935a}\label{classKinectAzureFrameProducer_a6511e2005fbded9197722da9a457935a}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!start@{start}}
+\index{start@{start}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Kinect\+Azure\+Frame\+Producer\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_aeef2d034dbb5efdf32d60ee2af176ce1}\label{classKinectAzureFrameProducer_aeef2d034dbb5efdf32d60ee2af176ce1}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!stop@{stop}}
+\index{stop@{stop}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Kinect\+Azure\+Frame\+Producer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a954ad93d777f96d31be7af3430c16d95}\label{classKinectAzureFrameProducer_a954ad93d777f96d31be7af3430c16d95}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!capture\_thread\_@{capture\_thread\_}}
+\index{capture\_thread\_@{capture\_thread\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{capture\_thread\_}{capture\_thread\_}}
+{\footnotesize\ttfamily std\+::thread Kinect\+Azure\+Frame\+Producer\+::capture\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a81dd4e987c553332c022d62142efb9cf}\label{classKinectAzureFrameProducer_a81dd4e987c553332c022d62142efb9cf}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!device\_@{device\_}}
+\index{device\_@{device\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{device\_}{device\_}}
+{\footnotesize\ttfamily k4a\+::device Kinect\+Azure\+Frame\+Producer\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a3765ad635f729af123d08853c0571bb2}\label{classKinectAzureFrameProducer_a3765ad635f729af123d08853c0571bb2}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!device\_index\_@{device\_index\_}}
+\index{device\_index\_@{device\_index\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{device\_index\_}{device\_index\_}}
+{\footnotesize\ttfamily uint32\+\_\+t Kinect\+Azure\+Frame\+Producer\+::device\+\_\+index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_ae066d5e171b9969402f0dd7d8caa01f2}\label{classKinectAzureFrameProducer_ae066d5e171b9969402f0dd7d8caa01f2}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!frame\_drop\_@{frame\_drop\_}}
+\index{frame\_drop\_@{frame\_drop\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{frame\_drop\_}{frame\_drop\_}}
+{\footnotesize\ttfamily uint32\+\_\+t Kinect\+Azure\+Frame\+Producer\+::frame\+\_\+drop\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_ad4055b776a0642d227ffa84d26119b14}\label{classKinectAzureFrameProducer_ad4055b776a0642d227ffa84d26119b14}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!m\_kinect\_topic@{m\_kinect\_topic}}
+\index{m\_kinect\_topic@{m\_kinect\_topic}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{m\_kinect\_topic}{m\_kinect\_topic}}
+{\footnotesize\ttfamily std\+::string Kinect\+Azure\+Frame\+Producer\+::m\+\_\+kinect\+\_\+topic\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a89e76ee63ef1e87c236cdf57c004fe80}\label{classKinectAzureFrameProducer_a89e76ee63ef1e87c236cdf57c004fe80}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!running\_@{running\_}}
+\index{running\_@{running\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{running\_}{running\_}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Kinect\+Azure\+Frame\+Producer\+::running\+\_\+ \{false\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_a8a8d1b2c82d8bc005365c32c074cd5f2}\label{classKinectAzureFrameProducer_a8a8d1b2c82d8bc005365c32c074cd5f2}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!save\_images\_@{save\_images\_}}
+\index{save\_images\_@{save\_images\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{save\_images\_}{save\_images\_}}
+{\footnotesize\ttfamily bool Kinect\+Azure\+Frame\+Producer\+::save\+\_\+images\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classKinectAzureFrameProducer_ae6965992426ca621f0c1d2f629d9c1b9}\label{classKinectAzureFrameProducer_ae6965992426ca621f0c1d2f629d9c1b9}} 
+\index{KinectAzureFrameProducer@{KinectAzureFrameProducer}!socket\_@{socket\_}}
+\index{socket\_@{socket\_}!KinectAzureFrameProducer@{KinectAzureFrameProducer}}
+\doxysubsubsection{\texorpdfstring{socket\_}{socket\_}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$zmq\+::socket\+\_\+t$>$ Kinect\+Azure\+Frame\+Producer\+::socket\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/src/kinect/\mbox{\hyperlink{kinect_8cpp}{kinect.\+cpp}}\end{DoxyCompactItemize}

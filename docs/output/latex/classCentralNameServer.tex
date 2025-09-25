@@ -1,0 +1,150 @@
+\hypertarget{classCentralNameServer}{}\doxysection{Central\+Name\+Server Class Reference}
+\label{classCentralNameServer}\index{CentralNameServer@{CentralNameServer}}
+
+
+{\ttfamily \#include $<$cns.\+hpp$>$}
+
+
+
+Inheritance diagram for Central\+Name\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classCentralNameServer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Central\+Name\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classCentralNameServer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCentralNameServer_ae64885962b2b20da4649635f4f586ea3}{Central\+Name\+Server}} (string ip\+\_\+address, int port, string master\+\_\+ip\+\_\+address)
+\item 
+\mbox{\hyperlink{classCentralNameServer_a79789499c1f02bc22b54bfd8447b27d9}{$\sim$\+Central\+Name\+Server}} ()
+\item 
+void \mbox{\hyperlink{classCentralNameServer_abcde224db9cee7f09e71721e8db1cb60}{register\+\_\+node}} (string topic, string ip\+\_\+address, int port)
+\item 
+void \mbox{\hyperlink{classCentralNameServer_a7f633dad0caf3941210d8669170aa85f}{unregister\+\_\+node}} (string topic)
+\item 
+void \mbox{\hyperlink{classCentralNameServer_a794cf43ac38057ee28741473581446da}{reply\+\_\+loop}} ()
+\item 
+bool \mbox{\hyperlink{classCentralNameServer_a1794d19870fe90d715d4512e8b68698e}{validate\+\_\+request}} (\mbox{\hyperlink{node_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{nlohmann\+::json}} request)
+\item 
+void \mbox{\hyperlink{classCentralNameServer_a82d820b33de2282f8313b7883ecd2969}{clear\+\_\+registry}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCentralNameServer_aad22450317250eade609c5145b054b63}{m\+\_\+port}}
+\item 
+zmq\+::socket\+\_\+t \mbox{\hyperlink{classCentralNameServer_aaecb0d81eda8fcf3bcdc34c0e890b792}{m\+\_\+socket}}
+\item 
+string \mbox{\hyperlink{classCentralNameServer_adb8594c7c3f06e685c6b3c7c0ffb01e1}{m\+\_\+log\+\_\+name}}
+\item 
+vector$<$ \mbox{\hyperlink{structNodeInfo}{Node\+Info}} $>$ \mbox{\hyperlink{classCentralNameServer_aa11885b99f180466c7c4b39c03d391fd}{m\+\_\+registered\+\_\+nodes}}
+\item 
+map$<$ string, string $>$ \mbox{\hyperlink{classCentralNameServer_a02209d5f81ab18853560568a73a74e74}{m\+\_\+registered\+\_\+topics}}
+\item 
+map$<$ string, string $>$ \mbox{\hyperlink{classCentralNameServer_a82261ef2e981b9e2ab504a4c8d0ff60f}{m\+\_\+data\+\_\+storage}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCentralNameServer_ae64885962b2b20da4649635f4f586ea3}\label{classCentralNameServer_ae64885962b2b20da4649635f4f586ea3}} 
+\index{CentralNameServer@{CentralNameServer}!CentralNameServer@{CentralNameServer}}
+\index{CentralNameServer@{CentralNameServer}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{CentralNameServer()}{CentralNameServer()}}
+{\footnotesize\ttfamily Central\+Name\+Server\+::\+Central\+Name\+Server (\begin{DoxyParamCaption}\item[{string}]{ip\+\_\+address,  }\item[{int}]{port,  }\item[{string}]{master\+\_\+ip\+\_\+address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCentralNameServer_a79789499c1f02bc22b54bfd8447b27d9}\label{classCentralNameServer_a79789499c1f02bc22b54bfd8447b27d9}} 
+\index{CentralNameServer@{CentralNameServer}!````~CentralNameServer@{$\sim$CentralNameServer}}
+\index{````~CentralNameServer@{$\sim$CentralNameServer}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$CentralNameServer()}{~CentralNameServer()}}
+{\footnotesize\ttfamily Central\+Name\+Server\+::$\sim$\+Central\+Name\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCentralNameServer_a82d820b33de2282f8313b7883ecd2969}\label{classCentralNameServer_a82d820b33de2282f8313b7883ecd2969}} 
+\index{CentralNameServer@{CentralNameServer}!clear\_registry@{clear\_registry}}
+\index{clear\_registry@{clear\_registry}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{clear\_registry()}{clear\_registry()}}
+{\footnotesize\ttfamily void Central\+Name\+Server\+::clear\+\_\+registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCentralNameServer_abcde224db9cee7f09e71721e8db1cb60}\label{classCentralNameServer_abcde224db9cee7f09e71721e8db1cb60}} 
+\index{CentralNameServer@{CentralNameServer}!register\_node@{register\_node}}
+\index{register\_node@{register\_node}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{register\_node()}{register\_node()}}
+{\footnotesize\ttfamily void Central\+Name\+Server\+::register\+\_\+node (\begin{DoxyParamCaption}\item[{string}]{topic,  }\item[{string}]{ip\+\_\+address,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCentralNameServer_a794cf43ac38057ee28741473581446da}\label{classCentralNameServer_a794cf43ac38057ee28741473581446da}} 
+\index{CentralNameServer@{CentralNameServer}!reply\_loop@{reply\_loop}}
+\index{reply\_loop@{reply\_loop}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{reply\_loop()}{reply\_loop()}}
+{\footnotesize\ttfamily void Central\+Name\+Server\+::reply\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCentralNameServer_a7f633dad0caf3941210d8669170aa85f}\label{classCentralNameServer_a7f633dad0caf3941210d8669170aa85f}} 
+\index{CentralNameServer@{CentralNameServer}!unregister\_node@{unregister\_node}}
+\index{unregister\_node@{unregister\_node}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{unregister\_node()}{unregister\_node()}}
+{\footnotesize\ttfamily void Central\+Name\+Server\+::unregister\+\_\+node (\begin{DoxyParamCaption}\item[{string}]{topic }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCentralNameServer_a1794d19870fe90d715d4512e8b68698e}\label{classCentralNameServer_a1794d19870fe90d715d4512e8b68698e}} 
+\index{CentralNameServer@{CentralNameServer}!validate\_request@{validate\_request}}
+\index{validate\_request@{validate\_request}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{validate\_request()}{validate\_request()}}
+{\footnotesize\ttfamily bool Central\+Name\+Server\+::validate\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{node_8hpp_ab701e3ac61a85b337ec5c1abaad6742d}{nlohmann\+::json}}}]{request }\end{DoxyParamCaption})}
+
+Expected format\+: \{ \char`\"{}action\char`\"{}\+: \char`\"{}register\char`\"{} $\vert$ \char`\"{}unregister\char`\"{} $\vert$ \char`\"{}lookup\char`\"{}, \char`\"{}topic\char`\"{}\+: \char`\"{}/kinect/0/depth\char`\"{}, \char`\"{}ip\+\_\+address\char`\"{}\+: \char`\"{}127.\+0.\+0.\+1\char`\"{}, \char`\"{}port\char`\"{}\+: 5001 \}
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCentralNameServer_a82261ef2e981b9e2ab504a4c8d0ff60f}\label{classCentralNameServer_a82261ef2e981b9e2ab504a4c8d0ff60f}} 
+\index{CentralNameServer@{CentralNameServer}!m\_data\_storage@{m\_data\_storage}}
+\index{m\_data\_storage@{m\_data\_storage}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_data\_storage}{m\_data\_storage}}
+{\footnotesize\ttfamily map$<$string, string$>$ Central\+Name\+Server\+::m\+\_\+data\+\_\+storage\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCentralNameServer_adb8594c7c3f06e685c6b3c7c0ffb01e1}\label{classCentralNameServer_adb8594c7c3f06e685c6b3c7c0ffb01e1}} 
+\index{CentralNameServer@{CentralNameServer}!m\_log\_name@{m\_log\_name}}
+\index{m\_log\_name@{m\_log\_name}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_log\_name}{m\_log\_name}}
+{\footnotesize\ttfamily string Central\+Name\+Server\+::m\+\_\+log\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCentralNameServer_aad22450317250eade609c5145b054b63}\label{classCentralNameServer_aad22450317250eade609c5145b054b63}} 
+\index{CentralNameServer@{CentralNameServer}!m\_port@{m\_port}}
+\index{m\_port@{m\_port}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_port}{m\_port}}
+{\footnotesize\ttfamily int Central\+Name\+Server\+::m\+\_\+port\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCentralNameServer_aa11885b99f180466c7c4b39c03d391fd}\label{classCentralNameServer_aa11885b99f180466c7c4b39c03d391fd}} 
+\index{CentralNameServer@{CentralNameServer}!m\_registered\_nodes@{m\_registered\_nodes}}
+\index{m\_registered\_nodes@{m\_registered\_nodes}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_registered\_nodes}{m\_registered\_nodes}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{structNodeInfo}{Node\+Info}}$>$ Central\+Name\+Server\+::m\+\_\+registered\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCentralNameServer_a02209d5f81ab18853560568a73a74e74}\label{classCentralNameServer_a02209d5f81ab18853560568a73a74e74}} 
+\index{CentralNameServer@{CentralNameServer}!m\_registered\_topics@{m\_registered\_topics}}
+\index{m\_registered\_topics@{m\_registered\_topics}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_registered\_topics}{m\_registered\_topics}}
+{\footnotesize\ttfamily map$<$string, string$>$ Central\+Name\+Server\+::m\+\_\+registered\+\_\+topics\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCentralNameServer_aaecb0d81eda8fcf3bcdc34c0e890b792}\label{classCentralNameServer_aaecb0d81eda8fcf3bcdc34c0e890b792}} 
+\index{CentralNameServer@{CentralNameServer}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!CentralNameServer@{CentralNameServer}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily zmq\+::socket\+\_\+t Central\+Name\+Server\+::m\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+cpp/src/name\+\_\+server/\mbox{\hyperlink{cns_8hpp}{cns.\+hpp}}\item 
+cpp/src/name\+\_\+server/\mbox{\hyperlink{cns_8cpp}{cns.\+cpp}}\end{DoxyCompactItemize}

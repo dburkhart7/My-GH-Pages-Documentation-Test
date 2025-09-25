@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['m_5falignment_5flog_5fname_148',['m_alignment_log_name',['../classGenericNode.html#ad574a1743fa0a10697a9fdff85c6b140',1,'GenericNode']]],
+  ['m_5falignment_5flogger_149',['m_alignment_logger',['../classGenericNode.html#aa27223e1b038135e6282aa8e7e761371',1,'GenericNode']]],
+  ['m_5fatomic_5fstop_150',['m_atomic_stop',['../classGenericNode.html#af8941aa44d925217f1da44dd44fa3015',1,'GenericNode']]],
+  ['m_5fcns_5fip_151',['m_cns_ip',['../classGenericNode.html#aadf10b691f764c432c8b58ed7ab2b50d',1,'GenericNode']]],
+  ['m_5fcns_5fport_152',['m_cns_port',['../classGenericNode.html#aae4aa815077a516e5a391dd07e551e1b',1,'GenericNode']]],
+  ['m_5fcns_5fsocket_153',['m_cns_socket',['../classGenericNode.html#a0e68b84ca7fae927800a6b8cd57c72fe',1,'GenericNode']]],
+  ['m_5fcontext_154',['m_context',['../classGenericNode.html#a55ce54bd02552925d45ac68561808783',1,'GenericNode']]],
+  ['m_5fdata_5fstorage_155',['m_data_storage',['../classCentralNameServer.html#a82261ef2e981b9e2ab504a4c8d0ff60f',1,'CentralNameServer']]],
+  ['m_5fip_5faddress_156',['m_ip_address',['../classGenericNode.html#a3d93d0d8897d58d9559bbcfb04846c18',1,'GenericNode']]],
+  ['m_5fkinect_5ftopic_157',['m_kinect_topic',['../classKinectAzureFrameProducer.html#ad4055b776a0642d227ffa84d26119b14',1,'KinectAzureFrameProducer']]],
+  ['m_5flog_5fname_158',['m_log_name',['../classCentralNameServer.html#adb8594c7c3f06e685c6b3c7c0ffb01e1',1,'CentralNameServer::m_log_name()'],['../classGenericNode.html#a63135279a6744c7fc14e445532a3fada',1,'GenericNode::m_log_name()']]],
+  ['m_5flogger_159',['m_logger',['../classGenericNode.html#a0072a0e87b2e126fec7129a30e6ea112',1,'GenericNode']]],
+  ['m_5fnode_5fid_160',['m_node_id',['../classGenericNode.html#aa1ca4cbc7d8d7a2a2c826ce476cf80e4',1,'GenericNode']]],
+  ['m_5fnode_5ftype_161',['m_node_type',['../classGenericNode.html#ad6aff35358bcf7d0ad9876dfc5fc1d94',1,'GenericNode']]],
+  ['m_5fport_162',['m_port',['../classCentralNameServer.html#aad22450317250eade609c5145b054b63',1,'CentralNameServer']]],
+  ['m_5fregistered_5fnodes_163',['m_registered_nodes',['../classCentralNameServer.html#aa11885b99f180466c7c4b39c03d391fd',1,'CentralNameServer']]],
+  ['m_5fregistered_5ftopics_164',['m_registered_topics',['../classCentralNameServer.html#a02209d5f81ab18853560568a73a74e74',1,'CentralNameServer::m_registered_topics()'],['../classGenericNode.html#aacf77c74031365e41f51871a4c300c04',1,'GenericNode::m_registered_topics()']]],
+  ['m_5fsocket_165',['m_socket',['../classCentralNameServer.html#aaecb0d81eda8fcf3bcdc34c0e890b792',1,'CentralNameServer']]],
+  ['m_5fthreads_166',['m_threads',['../classGenericNode.html#a1d36698d5ed4f26102e29ce4500f72cc',1,'GenericNode']]],
+  ['m_5ftopic_167',['m_topic',['../classGenericNode.html#a74d99ba181d746b467ba767fd93817af',1,'GenericNode']]],
+  ['max_5fcap_5ffail_5fcount_168',['MAX_CAP_FAIL_COUNT',['../kinect_8cpp.html#af3296f3475a84d034cdc51a48e4bc916',1,'kinect.cpp']]],
+  ['mtx_169',['mtx',['../classGenericNode.html#a7443513267797a239b43d3e0eb94a004',1,'GenericNode']]]
+];

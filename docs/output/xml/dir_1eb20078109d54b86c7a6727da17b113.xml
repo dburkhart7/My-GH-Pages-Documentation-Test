@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_1eb20078109d54b86c7a6727da17b113" kind="dir">
+    <compoundname>cpp/src/name_server</compoundname>
+    <innerfile refid="cns_8cpp">cns.cpp</innerfile>
+    <innerfile refid="cns_8hpp">cns.hpp</innerfile>
+    <innerfile refid="cns__main_8cpp">cns_main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpp/src/name_server/"/>
+  </compounddef>
+</doxygen>

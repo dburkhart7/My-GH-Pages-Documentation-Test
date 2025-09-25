@@ -1,0 +1,124 @@
+\hypertarget{kinect_8cpp}{}\doxysection{cpp/src/kinect/kinect.cpp File Reference}
+\label{kinect_8cpp}\index{cpp/src/kinect/kinect.cpp@{cpp/src/kinect/kinect.cpp}}
+{\ttfamily \#include $<$k4a/k4a.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$zmq.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}../node.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$quill/\+Backend.\+h$>$}\newline
+{\ttfamily \#include $<$quill/\+Frontend.\+h$>$}\newline
+{\ttfamily \#include $<$quill/\+Log\+Macros.\+h$>$}\newline
+{\ttfamily \#include $<$quill/\+Logger.\+h$>$}\newline
+{\ttfamily \#include $<$quill/sinks/\+File\+Sink.\+h$>$}\newline
+{\ttfamily \#include $<$quill/sinks/\+Console\+Sink.\+h$>$}\newline
+Include dependency graph for kinect.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kinect_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKinectAzureFrameProducer}{Kinect\+Azure\+Frame\+Producer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{kinect_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} = nlohmann\+::json
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{kinect_8cpp_a0e45d6341ab54dc1b3f17c1500690506}{g\+\_\+stop\+\_\+requested}} (false)
+\item 
+void \mbox{\hyperlink{kinect_8cpp_a3b527c56ed133ee6815bfbc625e757af}{signal\+\_\+handler}} (int signal)
+\item 
+int \mbox{\hyperlink{kinect_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \mbox{\hyperlink{kinect_8cpp_a2a6ad538f65c525f16ad9b4113a43338}{CAMERA\+\_\+\+TOPIC}} = \char`\"{}/camera/ir\char`\"{}
+\item 
+const int \mbox{\hyperlink{kinect_8cpp_a1e95172f710bac4c9f55947e22fa6d6e}{CAMERA\+\_\+\+PORT}} = 5555
+\item 
+const int \mbox{\hyperlink{kinect_8cpp_a70ed22f86ef541f049a9081672206f6f}{EXPECTED\+\_\+\+FRAME\+\_\+\+RATE}} = 30
+\item 
+const int \mbox{\hyperlink{kinect_8cpp_af3296f3475a84d034cdc51a48e4bc916}{MAX\+\_\+\+CAP\+\_\+\+FAIL\+\_\+\+COUNT}} = 15
+\item 
+quill\+::\+Logger $\ast$ \mbox{\hyperlink{kinect_8cpp_a1d6ab4efe553995cff37ba355bc34443}{g\+\_\+logger}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{kinect_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}\label{kinect_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}} 
+\index{kinect.cpp@{kinect.cpp}!json@{json}}
+\index{json@{json}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{image__viewer_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} =  nlohmann\+::json}
+
+Azure Kinect IR Frame Producer (C++ version)
+
+This application reads IR frames from an Azure Kinect camera and publishes them to a Zero\+MQ socket. It\textquotesingle{}s designed to test whether the C++ Azure Kinect SDK can access the device over SSH where the Python version fails. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{kinect_8cpp_a0e45d6341ab54dc1b3f17c1500690506}\label{kinect_8cpp_a0e45d6341ab54dc1b3f17c1500690506}} 
+\index{kinect.cpp@{kinect.cpp}!g\_stop\_requested@{g\_stop\_requested}}
+\index{g\_stop\_requested@{g\_stop\_requested}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_stop\_requested()}{g\_stop\_requested()}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ g\+\_\+stop\+\_\+requested (\begin{DoxyParamCaption}\item[{false}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{kinect_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{kinect_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{kinect.cpp@{kinect.cpp}!main@{main}}
+\index{main@{main}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{kinect_8cpp_a3b527c56ed133ee6815bfbc625e757af}\label{kinect_8cpp_a3b527c56ed133ee6815bfbc625e757af}} 
+\index{kinect.cpp@{kinect.cpp}!signal\_handler@{signal\_handler}}
+\index{signal\_handler@{signal\_handler}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{signal\_handler()}{signal\_handler()}}
+{\footnotesize\ttfamily void signal\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signal }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{kinect_8cpp_a1e95172f710bac4c9f55947e22fa6d6e}\label{kinect_8cpp_a1e95172f710bac4c9f55947e22fa6d6e}} 
+\index{kinect.cpp@{kinect.cpp}!CAMERA\_PORT@{CAMERA\_PORT}}
+\index{CAMERA\_PORT@{CAMERA\_PORT}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_PORT}{CAMERA\_PORT}}
+{\footnotesize\ttfamily const int CAMERA\+\_\+\+PORT = 5555}
+
+\mbox{\Hypertarget{kinect_8cpp_a2a6ad538f65c525f16ad9b4113a43338}\label{kinect_8cpp_a2a6ad538f65c525f16ad9b4113a43338}} 
+\index{kinect.cpp@{kinect.cpp}!CAMERA\_TOPIC@{CAMERA\_TOPIC}}
+\index{CAMERA\_TOPIC@{CAMERA\_TOPIC}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_TOPIC}{CAMERA\_TOPIC}}
+{\footnotesize\ttfamily const std\+::string CAMERA\+\_\+\+TOPIC = \char`\"{}/camera/ir\char`\"{}}
+
+\mbox{\Hypertarget{kinect_8cpp_a70ed22f86ef541f049a9081672206f6f}\label{kinect_8cpp_a70ed22f86ef541f049a9081672206f6f}} 
+\index{kinect.cpp@{kinect.cpp}!EXPECTED\_FRAME\_RATE@{EXPECTED\_FRAME\_RATE}}
+\index{EXPECTED\_FRAME\_RATE@{EXPECTED\_FRAME\_RATE}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{EXPECTED\_FRAME\_RATE}{EXPECTED\_FRAME\_RATE}}
+{\footnotesize\ttfamily const int EXPECTED\+\_\+\+FRAME\+\_\+\+RATE = 30}
+
+\mbox{\Hypertarget{kinect_8cpp_a1d6ab4efe553995cff37ba355bc34443}\label{kinect_8cpp_a1d6ab4efe553995cff37ba355bc34443}} 
+\index{kinect.cpp@{kinect.cpp}!g\_logger@{g\_logger}}
+\index{g\_logger@{g\_logger}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_logger}{g\_logger}}
+{\footnotesize\ttfamily quill\+::\+Logger$\ast$ g\+\_\+logger = nullptr}
+
+\mbox{\Hypertarget{kinect_8cpp_af3296f3475a84d034cdc51a48e4bc916}\label{kinect_8cpp_af3296f3475a84d034cdc51a48e4bc916}} 
+\index{kinect.cpp@{kinect.cpp}!MAX\_CAP\_FAIL\_COUNT@{MAX\_CAP\_FAIL\_COUNT}}
+\index{MAX\_CAP\_FAIL\_COUNT@{MAX\_CAP\_FAIL\_COUNT}!kinect.cpp@{kinect.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_CAP\_FAIL\_COUNT}{MAX\_CAP\_FAIL\_COUNT}}
+{\footnotesize\ttfamily const int MAX\+\_\+\+CAP\+\_\+\+FAIL\+\_\+\+COUNT = 15}
+

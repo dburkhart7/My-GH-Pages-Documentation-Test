@@ -1,0 +1,61 @@
+\hypertarget{cns__main_8cpp}{}\doxysection{cpp/src/name\+\_\+server/cns\+\_\+main.cpp File Reference}
+\label{cns__main_8cpp}\index{cpp/src/name\_server/cns\_main.cpp@{cpp/src/name\_server/cns\_main.cpp}}
+{\ttfamily \#include \char`\"{}cns.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$argparse/argparse.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$quill/\+Backend.\+h$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for cns\+\_\+main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{cns__main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cns__main_8cpp_af675374954cdabdf63d036fe3c12d348}{signal\+\_\+handler}} (int signum)
+\item 
+int \mbox{\hyperlink{cns__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static unique\+\_\+ptr$<$ \mbox{\hyperlink{classCentralNameServer}{Central\+Name\+Server}} $>$ \mbox{\hyperlink{cns__main_8cpp_ae860b9955a8e47ab4a3bd31d49ce8712}{g\+\_\+server}}
+\item 
+static bool \mbox{\hyperlink{cns__main_8cpp_a82d33897ce200eadf132e93031f0e595}{g\+\_\+running}} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cns__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{cns__main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{cns\_main.cpp@{cns\_main.cpp}!main@{main}}
+\index{main@{main}!cns\_main.cpp@{cns\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{cns__main_8cpp_af675374954cdabdf63d036fe3c12d348}\label{cns__main_8cpp_af675374954cdabdf63d036fe3c12d348}} 
+\index{cns\_main.cpp@{cns\_main.cpp}!signal\_handler@{signal\_handler}}
+\index{signal\_handler@{signal\_handler}!cns\_main.cpp@{cns\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{signal\_handler()}{signal\_handler()}}
+{\footnotesize\ttfamily void signal\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signum }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cns__main_8cpp_a82d33897ce200eadf132e93031f0e595}\label{cns__main_8cpp_a82d33897ce200eadf132e93031f0e595}} 
+\index{cns\_main.cpp@{cns\_main.cpp}!g\_running@{g\_running}}
+\index{g\_running@{g\_running}!cns\_main.cpp@{cns\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_running}{g\_running}}
+{\footnotesize\ttfamily bool g\+\_\+running = true\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{cns__main_8cpp_ae860b9955a8e47ab4a3bd31d49ce8712}\label{cns__main_8cpp_ae860b9955a8e47ab4a3bd31d49ce8712}} 
+\index{cns\_main.cpp@{cns\_main.cpp}!g\_server@{g\_server}}
+\index{g\_server@{g\_server}!cns\_main.cpp@{cns\_main.cpp}}
+\doxysubsubsection{\texorpdfstring{g\_server}{g\_server}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$\mbox{\hyperlink{classCentralNameServer}{Central\+Name\+Server}}$>$ g\+\_\+server\hspace{0.3cm}{\ttfamily [static]}}
+

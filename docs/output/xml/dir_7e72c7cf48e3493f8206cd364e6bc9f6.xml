@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_7e72c7cf48e3493f8206cd364e6bc9f6" kind="dir">
+    <compoundname>cpp/src</compoundname>
+    <innerdir refid="dir_e580cbb590e2d983ab50ae6e6ebd2356">cpp/src/kinect</innerdir>
+    <innerdir refid="dir_1eb20078109d54b86c7a6727da17b113">cpp/src/name_server</innerdir>
+    <innerfile refid="constants_8hpp">constants.hpp</innerfile>
+    <innerfile refid="image__viewer_8cpp">image_viewer.cpp</innerfile>
+    <innerfile refid="node_8hpp">node.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpp/src/"/>
+  </compounddef>
+</doxygen>

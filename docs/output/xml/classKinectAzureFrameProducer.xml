@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classKinectAzureFrameProducer" kind="class" language="C++" prot="public">
+    <compoundname>KinectAzureFrameProducer</compoundname>
+    <basecompoundref refid="classGenericNode" prot="public" virt="non-virtual">GenericNode</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1ad4055b776a0642d227ffa84d26119b14" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string KinectAzureFrameProducer::m_kinect_topic</definition>
+        <argsstring></argsstring>
+        <name>m_kinect_topic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="134" column="17" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1a3765ad635f729af123d08853c0571bb2" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t KinectAzureFrameProducer::device_index_</definition>
+        <argsstring></argsstring>
+        <name>device_index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="135" column="14" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1ae066d5e171b9969402f0dd7d8caa01f2" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t KinectAzureFrameProducer::frame_drop_</definition>
+        <argsstring></argsstring>
+        <name>frame_drop_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="136" column="14" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1a8a8d1b2c82d8bc005365c32c074cd5f2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KinectAzureFrameProducer::save_images_</definition>
+        <argsstring></argsstring>
+        <name>save_images_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="137" column="10" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1a81dd4e987c553332c022d62142efb9cf" prot="private" static="no" mutable="no">
+        <type>k4a::device</type>
+        <definition>k4a::device KinectAzureFrameProducer::device_</definition>
+        <argsstring></argsstring>
+        <name>device_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="138" column="17" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1a89e76ee63ef1e87c236cdf57c004fe80" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; KinectAzureFrameProducer::running_</definition>
+        <argsstring></argsstring>
+        <name>running_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="139" column="17" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1a954ad93d777f96d31be7af3430c16d95" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread KinectAzureFrameProducer::capture_thread_</definition>
+        <argsstring></argsstring>
+        <name>capture_thread_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="140" column="17" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKinectAzureFrameProducer_1ae6965992426ca621f0c1d2f629d9c1b9" prot="private" static="no" mutable="no">
+        <type>unique_ptr&lt; zmq::socket_t &gt;</type>
+        <definition>unique_ptr&lt;zmq::socket_t&gt; KinectAzureFrameProducer::socket_</definition>
+        <argsstring></argsstring>
+        <name>socket_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="141" column="16" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKinectAzureFrameProducer_1aa55b6806072ea3642a63c6a87bf69230" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KinectAzureFrameProducer::KinectAzureFrameProducer</definition>
+        <argsstring>(const std::string &amp;topic=CAMERA_TOPIC, int port=CAMERA_PORT, uint32_t device_index=0, uint32_t frame_drop=0, bool master=false, bool save_images=false, quill::Logger *logger=nullptr)</argsstring>
+        <name>KinectAzureFrameProducer</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>topic</declname>
+          <defval><ref refid="kinect_8cpp_1a2a6ad538f65c525f16ad9b4113a43338" kindref="member">CAMERA_TOPIC</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+          <defval><ref refid="kinect_8cpp_1a1e95172f710bac4c9f55947e22fa6d6e" kindref="member">CAMERA_PORT</ref></defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>device_index</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>frame_drop</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>master</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>save_images</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>quill::Logger *</type>
+          <declname>logger</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="50" column="5" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="50" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classKinectAzureFrameProducer_1add411b7c923ab53f1ffabea357f46d83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KinectAzureFrameProducer::~KinectAzureFrameProducer</definition>
+        <argsstring>()</argsstring>
+        <name>~KinectAzureFrameProducer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="103" column="5" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="103" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classKinectAzureFrameProducer_1a6511e2005fbded9197722da9a457935a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinectAzureFrameProducer::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="116" column="10" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classKinectAzureFrameProducer_1aeef2d034dbb5efdf32d60ee2af176ce1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinectAzureFrameProducer::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="122" column="10" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="122" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classKinectAzureFrameProducer_1a1d8cfba4d02690bf8f9837a59e68c183" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KinectAzureFrameProducer::capture_loop</definition>
+        <argsstring>()</argsstring>
+        <name>capture_loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpp/src/kinect/kinect.cpp" line="143" column="10" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="143" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>KinectAzureFrameProducer</label>
+        <link refid="classKinectAzureFrameProducer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GenericNode</label>
+        <link refid="classGenericNode"/>
+      </node>
+      <node id="1">
+        <label>KinectAzureFrameProducer</label>
+        <link refid="classKinectAzureFrameProducer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpp/src/kinect/kinect.cpp" line="48" column="1" bodyfile="cpp/src/kinect/kinect.cpp" bodystart="48" bodyend="318"/>
+    <listofallmembers>
+      <member refid="classKinectAzureFrameProducer_1a1d8cfba4d02690bf8f9837a59e68c183" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>capture_loop</name></member>
+      <member refid="classKinectAzureFrameProducer_1a954ad93d777f96d31be7af3430c16d95" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>capture_thread_</name></member>
+      <member refid="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>debug</name></member>
+      <member refid="classKinectAzureFrameProducer_1a81dd4e987c553332c022d62142efb9cf" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>device_</name></member>
+      <member refid="classKinectAzureFrameProducer_1a3765ad635f729af123d08853c0571bb2" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>device_index_</name></member>
+      <member refid="classKinectAzureFrameProducer_1ae066d5e171b9969402f0dd7d8caa01f2" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>frame_drop_</name></member>
+      <member refid="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>GenericNode</name></member>
+      <member refid="classGenericNode_1a1918a462ad509408d106dc2f16f4098e" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>get_topic_endpoint</name></member>
+      <member refid="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>HEARTBEAT_INTERVAL_MS</name></member>
+      <member refid="classGenericNode_1af284220e094418653d56602cd814b5fa" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>init_generic_node</name></member>
+      <member refid="classGenericNode_1ac623c64fa2b52e6bb691514131abb634" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>init_logger</name></member>
+      <member refid="classKinectAzureFrameProducer_1aa55b6806072ea3642a63c6a87bf69230" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>KinectAzureFrameProducer</name></member>
+      <member refid="classGenericNode_1a0b4c39692f2000316497c6ab0bece455" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>log_debug_message</name></member>
+      <member refid="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>log_error_message</name></member>
+      <member refid="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>log_info_message</name></member>
+      <member refid="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>log_warning_message</name></member>
+      <member refid="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_alignment_log_name</name></member>
+      <member refid="classGenericNode_1aa27223e1b038135e6282aa8e7e761371" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_alignment_logger</name></member>
+      <member refid="classGenericNode_1af8941aa44d925217f1da44dd44fa3015" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_atomic_stop</name></member>
+      <member refid="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_cns_ip</name></member>
+      <member refid="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_cns_port</name></member>
+      <member refid="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_cns_socket</name></member>
+      <member refid="classGenericNode_1a55ce54bd02552925d45ac68561808783" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_context</name></member>
+      <member refid="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_ip_address</name></member>
+      <member refid="classKinectAzureFrameProducer_1ad4055b776a0642d227ffa84d26119b14" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_kinect_topic</name></member>
+      <member refid="classGenericNode_1a63135279a6744c7fc14e445532a3fada" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_log_name</name></member>
+      <member refid="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_logger</name></member>
+      <member refid="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_node_id</name></member>
+      <member refid="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_node_type</name></member>
+      <member refid="classGenericNode_1aacf77c74031365e41f51871a4c300c04" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_registered_topics</name></member>
+      <member refid="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_threads</name></member>
+      <member refid="classGenericNode_1a74d99ba181d746b467ba767fd93817af" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>m_topic</name></member>
+      <member refid="classGenericNode_1a7443513267797a239b43d3e0eb94a004" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>mtx</name></member>
+      <member refid="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>publish_heartbeat</name></member>
+      <member refid="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>register_service</name></member>
+      <member refid="classKinectAzureFrameProducer_1a89e76ee63ef1e87c236cdf57c004fe80" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>running_</name></member>
+      <member refid="classKinectAzureFrameProducer_1a8a8d1b2c82d8bc005365c32c074cd5f2" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>save_images_</name></member>
+      <member refid="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>send_req_cns</name></member>
+      <member refid="classGenericNode_1a89a166641de55fe564ae2a517b2053f9" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>set_debug</name></member>
+      <member refid="classGenericNode_1a42caa921663417c7a2d48fef594a5d88" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>set_log_filter_level_json</name></member>
+      <member refid="classGenericNode_1a5d0f994908063b6869f602b84a29c226" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>setup_cns_socket</name></member>
+      <member refid="classGenericNode_1af1950452c0bedf0140c9db99896dd2e5" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>setup_publisher</name></member>
+      <member refid="classGenericNode_1a272ee40ff6793a21b792018f0cbf8ceb" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>setup_subscriber</name></member>
+      <member refid="classKinectAzureFrameProducer_1ae6965992426ca621f0c1d2f629d9c1b9" prot="private" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>socket_</name></member>
+      <member refid="classKinectAzureFrameProducer_1a6511e2005fbded9197722da9a457935a" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>start</name></member>
+      <member refid="classGenericNode_1aa8638ff36e27afbcf26d392496537b94" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>start_frame_drop</name></member>
+      <member refid="classKinectAzureFrameProducer_1aeef2d034dbb5efdf32d60ee2af176ce1" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>stop</name></member>
+      <member refid="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>unregister_all_services</name></member>
+      <member refid="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99" prot="protected" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>unregister_service</name></member>
+      <member refid="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>~GenericNode</name></member>
+      <member refid="classKinectAzureFrameProducer_1add411b7c923ab53f1ffabea357f46d83" prot="public" virt="non-virtual"><scope>KinectAzureFrameProducer</scope><name>~KinectAzureFrameProducer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

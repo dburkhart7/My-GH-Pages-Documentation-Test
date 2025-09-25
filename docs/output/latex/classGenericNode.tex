@@ -1,0 +1,432 @@
+\hypertarget{classGenericNode}{}\doxysection{Generic\+Node Class Reference}
+\label{classGenericNode}\index{GenericNode@{GenericNode}}
+
+
+\mbox{\hyperlink{classGenericNode}{Generic\+Node}} Test description for a git push as well!!! Every Generic node has the following IO.  
+
+
+
+
+{\ttfamily \#include $<$node.\+hpp$>$}
+
+
+
+Inheritance diagram for Generic\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGenericNode__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGenericNode_af284220e094418653d56602cd814b5fa}{init\+\_\+generic\+\_\+node}} (string node\+\_\+type, string node\+\_\+id, string ip\+\_\+address)
+\item 
+\mbox{\hyperlink{classGenericNode_a80e2c82ccc5d4f362b0a67c6eaee3a13}{Generic\+Node}} (string node\+\_\+type, string node\+\_\+id, string ip\+\_\+address, string \mbox{\hyperlink{classGenericNode_aadf10b691f764c432c8b58ed7ab2b50d}{m\+\_\+cns\+\_\+ip}})
+\item 
+\mbox{\hyperlink{classGenericNode_ae97c1f46c781cbf09bfa7054097baa2a}{$\sim$\+Generic\+Node}} ()
+\item 
+void \mbox{\hyperlink{classGenericNode_ac623c64fa2b52e6bb691514131abb634}{init\+\_\+logger}} (quill\+::\+Logger $\ast$$\ast$logger, string name)
+\item 
+void \mbox{\hyperlink{classGenericNode_a0cbd0e24e8c36df83f51f60d6b463de5}{publish\+\_\+heartbeat}} ()
+\begin{DoxyCompactList}\small\item\em Publishes a heartbeat message to {\ttfamily /\{type\}/\{id\}/heartbeat}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGenericNode_a89a166641de55fe564ae2a517b2053f9}{set\+\_\+debug}} (bool \mbox{\hyperlink{classGenericNode_a1243a8b3e6a09ef210f9e56c509b0e93}{debug}})
+\item 
+bool \mbox{\hyperlink{classGenericNode_a1918a462ad509408d106dc2f16f4098e}{get\+\_\+topic\+\_\+endpoint}} (const string \&topic, string \&endpoint)
+\item 
+void \mbox{\hyperlink{classGenericNode_aa8638ff36e27afbcf26d392496537b94}{start\+\_\+frame\+\_\+drop}} (zmq\+::socket\+\_\+t \&sub\+\_\+socket)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGenericNode_a57a4b24d1167e30fa3fe636b570fd722}{log\+\_\+info\+\_\+message}} (const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{classGenericNode_a0b4c39692f2000316497c6ab0bece455}{log\+\_\+debug\+\_\+message}} (const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{classGenericNode_adefc9d1e5b1a10d9217a4c400593de8e}{log\+\_\+warning\+\_\+message}} (const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{classGenericNode_aaf5158671d363867457ffdcf3d3af1a0}{log\+\_\+error\+\_\+message}} (const std\+::string \&message)
+\item 
+void \mbox{\hyperlink{classGenericNode_a5d0f994908063b6869f602b84a29c226}{setup\+\_\+cns\+\_\+socket}} ()
+\item 
+auto \mbox{\hyperlink{classGenericNode_aa7cb5c90c7e2774a9f97c93d9509e381}{send\+\_\+req\+\_\+cns}} (zmq\+::message\+\_\+t \&reply, string request\+\_\+str)
+\item 
+bool \mbox{\hyperlink{classGenericNode_ab8ad0fca8ba95af121bcb5f8c698b18d}{register\+\_\+service}} (const string \&topic, int port)
+\item 
+bool \mbox{\hyperlink{classGenericNode_acf989ec8ab3d61619a3f685d8957bc99}{unregister\+\_\+service}} (const string \&topic)
+\item 
+bool \mbox{\hyperlink{classGenericNode_ab5942257206fbed9ad41cba3c52772b1}{unregister\+\_\+all\+\_\+services}} ()
+\item 
+unique\+\_\+ptr$<$ zmq\+::socket\+\_\+t $>$ \mbox{\hyperlink{classGenericNode_a272ee40ff6793a21b792018f0cbf8ceb}{setup\+\_\+subscriber}} (const string \&topic)
+\begin{DoxyCompactList}\small\item\em Sets up a subscriber socket to listen on a specific topic. \end{DoxyCompactList}\item 
+unique\+\_\+ptr$<$ zmq\+::socket\+\_\+t $>$ \mbox{\hyperlink{classGenericNode_af1950452c0bedf0140c9db99896dd2e5}{setup\+\_\+publisher}} (vector$<$ string $>$ topics)
+\item 
+bool \mbox{\hyperlink{classGenericNode_a42caa921663417c7a2d48fef594a5d88}{set\+\_\+log\+\_\+filter\+\_\+level\+\_\+json}} (const \mbox{\hyperlink{image__viewer_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&j, quill\+::\+Logger $\ast$logger, string name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classGenericNode_ad6aff35358bcf7d0ad9876dfc5fc1d94}{m\+\_\+node\+\_\+type}}
+\item 
+string \mbox{\hyperlink{classGenericNode_aa1ca4cbc7d8d7a2a2c826ce476cf80e4}{m\+\_\+node\+\_\+id}}
+\item 
+zmq\+::context\+\_\+t \mbox{\hyperlink{classGenericNode_a55ce54bd02552925d45ac68561808783}{m\+\_\+context}}
+\item 
+zmq\+::socket\+\_\+t \mbox{\hyperlink{classGenericNode_a0e68b84ca7fae927800a6b8cd57c72fe}{m\+\_\+cns\+\_\+socket}}
+\item 
+string \mbox{\hyperlink{classGenericNode_a74d99ba181d746b467ba767fd93817af}{m\+\_\+topic}}
+\item 
+string \mbox{\hyperlink{classGenericNode_aadf10b691f764c432c8b58ed7ab2b50d}{m\+\_\+cns\+\_\+ip}} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+int \mbox{\hyperlink{classGenericNode_aae4aa815077a516e5a391dd07e551e1b}{m\+\_\+cns\+\_\+port}} = 5555
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{classGenericNode_aacf77c74031365e41f51871a4c300c04}{m\+\_\+registered\+\_\+topics}}
+\item 
+const int \mbox{\hyperlink{classGenericNode_a3114ef1653a9c98d084bb618fcee4ce3}{HEARTBEAT\+\_\+\+INTERVAL\+\_\+\+MS}} = 1000
+\item 
+std\+::atomic$<$ bool $>$ \mbox{\hyperlink{classGenericNode_af8941aa44d925217f1da44dd44fa3015}{m\+\_\+atomic\+\_\+stop}} \{false\}
+\item 
+std\+::mutex \mbox{\hyperlink{classGenericNode_a7443513267797a239b43d3e0eb94a004}{mtx}}
+\item 
+vector$<$ thread $>$ \mbox{\hyperlink{classGenericNode_a1d36698d5ed4f26102e29ce4500f72cc}{m\+\_\+threads}}
+\item 
+quill\+::\+Logger $\ast$ \mbox{\hyperlink{classGenericNode_a0072a0e87b2e126fec7129a30e6ea112}{m\+\_\+logger}}
+\item 
+quill\+::\+Logger $\ast$ \mbox{\hyperlink{classGenericNode_aa27223e1b038135e6282aa8e7e761371}{m\+\_\+alignment\+\_\+logger}} = nullptr
+\item 
+bool \mbox{\hyperlink{classGenericNode_a1243a8b3e6a09ef210f9e56c509b0e93}{debug}} = false
+\item 
+string \mbox{\hyperlink{classGenericNode_a63135279a6744c7fc14e445532a3fada}{m\+\_\+log\+\_\+name}}
+\item 
+string \mbox{\hyperlink{classGenericNode_ad574a1743fa0a10697a9fdff85c6b140}{m\+\_\+alignment\+\_\+log\+\_\+name}}
+\item 
+string \mbox{\hyperlink{classGenericNode_a3d93d0d8897d58d9559bbcfb04846c18}{m\+\_\+ip\+\_\+address}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classGenericNode}{Generic\+Node}} Test description for a git push as well!!! Every Generic node has the following IO. 
+
+
+\begin{DoxyEnumerate}
+\item Subscriber to broadcast messages
+\item request socket for CNS lookups (to get a port and register with the CNS)
+\item Publisher to send out messages
+\item Subscriber to receive messages
+\end{DoxyEnumerate}
+
+Node identification
+\begin{DoxyEnumerate}
+\item Node type -\/ \mbox{[}kinect $\vert$ pcd $\vert$ saver $\vert$ UKF $\vert$ etc\mbox{]}
+\item Node id (random id)
+\item Node name -\/ \mbox{[}kinect\+\_\+0 $\vert$ pcd\+\_\+0 $\vert$ saver\+\_\+5 $\vert$ UKF\+\_\+3 $\vert$ etc\mbox{]} 
+\end{DoxyEnumerate}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGenericNode_a80e2c82ccc5d4f362b0a67c6eaee3a13}\label{classGenericNode_a80e2c82ccc5d4f362b0a67c6eaee3a13}} 
+\index{GenericNode@{GenericNode}!GenericNode@{GenericNode}}
+\index{GenericNode@{GenericNode}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{GenericNode()}{GenericNode()}}
+{\footnotesize\ttfamily Generic\+Node\+::\+Generic\+Node (\begin{DoxyParamCaption}\item[{string}]{node\+\_\+type,  }\item[{string}]{node\+\_\+id,  }\item[{string}]{ip\+\_\+address,  }\item[{string}]{m\+\_\+cns\+\_\+ip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGenericNode_ae97c1f46c781cbf09bfa7054097baa2a}\label{classGenericNode_ae97c1f46c781cbf09bfa7054097baa2a}} 
+\index{GenericNode@{GenericNode}!````~GenericNode@{$\sim$GenericNode}}
+\index{````~GenericNode@{$\sim$GenericNode}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenericNode()}{~GenericNode()}}
+{\footnotesize\ttfamily Generic\+Node\+::$\sim$\+Generic\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGenericNode_a1918a462ad509408d106dc2f16f4098e}\label{classGenericNode_a1918a462ad509408d106dc2f16f4098e}} 
+\index{GenericNode@{GenericNode}!get\_topic\_endpoint@{get\_topic\_endpoint}}
+\index{get\_topic\_endpoint@{get\_topic\_endpoint}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{get\_topic\_endpoint()}{get\_topic\_endpoint()}}
+{\footnotesize\ttfamily bool Generic\+Node\+::get\+\_\+topic\+\_\+endpoint (\begin{DoxyParamCaption}\item[{const string \&}]{topic,  }\item[{string \&}]{endpoint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Contacts the Parameter server (CNS) to retrieve the IP address and port associated with the specified topic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to lookup. \\
+\hline
+{\em endpoint} & The endpoint to be populated with the result. If the topic is not found, the endpoint will be empty. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the topic is found and the endpoint is populated, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGenericNode_af284220e094418653d56602cd814b5fa}\label{classGenericNode_af284220e094418653d56602cd814b5fa}} 
+\index{GenericNode@{GenericNode}!init\_generic\_node@{init\_generic\_node}}
+\index{init\_generic\_node@{init\_generic\_node}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{init\_generic\_node()}{init\_generic\_node()}}
+{\footnotesize\ttfamily void Generic\+Node\+::init\+\_\+generic\+\_\+node (\begin{DoxyParamCaption}\item[{string}]{node\+\_\+type,  }\item[{string}]{node\+\_\+id,  }\item[{string}]{ip\+\_\+address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGenericNode_ac623c64fa2b52e6bb691514131abb634}\label{classGenericNode_ac623c64fa2b52e6bb691514131abb634}} 
+\index{GenericNode@{GenericNode}!init\_logger@{init\_logger}}
+\index{init\_logger@{init\_logger}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{init\_logger()}{init\_logger()}}
+{\footnotesize\ttfamily void Generic\+Node\+::init\+\_\+logger (\begin{DoxyParamCaption}\item[{quill\+::\+Logger $\ast$$\ast$}]{logger,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Initialize the logger for this node.
+
+This function sets up a logger with two sinks\+: a file sink and a console sink. The file sink writes to a file with the name of the node, and the console sink writes to the console. The log level is set to Info unless debug is true, in which case it is set to Debug. \mbox{\Hypertarget{classGenericNode_a0b4c39692f2000316497c6ab0bece455}\label{classGenericNode_a0b4c39692f2000316497c6ab0bece455}} 
+\index{GenericNode@{GenericNode}!log\_debug\_message@{log\_debug\_message}}
+\index{log\_debug\_message@{log\_debug\_message}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{log\_debug\_message()}{log\_debug\_message()}}
+{\footnotesize\ttfamily void Generic\+Node\+::log\+\_\+debug\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aaf5158671d363867457ffdcf3d3af1a0}\label{classGenericNode_aaf5158671d363867457ffdcf3d3af1a0}} 
+\index{GenericNode@{GenericNode}!log\_error\_message@{log\_error\_message}}
+\index{log\_error\_message@{log\_error\_message}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{log\_error\_message()}{log\_error\_message()}}
+{\footnotesize\ttfamily void Generic\+Node\+::log\+\_\+error\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a57a4b24d1167e30fa3fe636b570fd722}\label{classGenericNode_a57a4b24d1167e30fa3fe636b570fd722}} 
+\index{GenericNode@{GenericNode}!log\_info\_message@{log\_info\_message}}
+\index{log\_info\_message@{log\_info\_message}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{log\_info\_message()}{log\_info\_message()}}
+{\footnotesize\ttfamily void Generic\+Node\+::log\+\_\+info\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_adefc9d1e5b1a10d9217a4c400593de8e}\label{classGenericNode_adefc9d1e5b1a10d9217a4c400593de8e}} 
+\index{GenericNode@{GenericNode}!log\_warning\_message@{log\_warning\_message}}
+\index{log\_warning\_message@{log\_warning\_message}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{log\_warning\_message()}{log\_warning\_message()}}
+{\footnotesize\ttfamily void Generic\+Node\+::log\+\_\+warning\+\_\+message (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a0cbd0e24e8c36df83f51f60d6b463de5}\label{classGenericNode_a0cbd0e24e8c36df83f51f60d6b463de5}} 
+\index{GenericNode@{GenericNode}!publish\_heartbeat@{publish\_heartbeat}}
+\index{publish\_heartbeat@{publish\_heartbeat}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{publish\_heartbeat()}{publish\_heartbeat()}}
+{\footnotesize\ttfamily void Generic\+Node\+::publish\+\_\+heartbeat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Publishes a heartbeat message to {\ttfamily /\{type\}/\{id\}/heartbeat}. 
+
+This function is an infinite loop that publishes a heartbeat message to the CNS at regular intervals. The heartbeat message contains the node type, node ID, and current state of the node. \mbox{\Hypertarget{classGenericNode_ab8ad0fca8ba95af121bcb5f8c698b18d}\label{classGenericNode_ab8ad0fca8ba95af121bcb5f8c698b18d}} 
+\index{GenericNode@{GenericNode}!register\_service@{register\_service}}
+\index{register\_service@{register\_service}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{register\_service()}{register\_service()}}
+{\footnotesize\ttfamily bool Generic\+Node\+::register\+\_\+service (\begin{DoxyParamCaption}\item[{const string \&}]{topic,  }\item[{int}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Registers a topic with the central name server (CNS). The CNS will store the IP address and port number of the topic so that other nodes can find and connect to it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & a string identifying the topic \\
+\hline
+{\em port} & the port number for the service \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the registration was successful, false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGenericNode_aa7cb5c90c7e2774a9f97c93d9509e381}\label{classGenericNode_aa7cb5c90c7e2774a9f97c93d9509e381}} 
+\index{GenericNode@{GenericNode}!send\_req\_cns@{send\_req\_cns}}
+\index{send\_req\_cns@{send\_req\_cns}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{send\_req\_cns()}{send\_req\_cns()}}
+{\footnotesize\ttfamily auto Generic\+Node\+::send\+\_\+req\+\_\+cns (\begin{DoxyParamCaption}\item[{zmq\+::message\+\_\+t \&}]{reply,  }\item[{string}]{request\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Sends a request/reply message to the cns. \mbox{\Hypertarget{classGenericNode_a89a166641de55fe564ae2a517b2053f9}\label{classGenericNode_a89a166641de55fe564ae2a517b2053f9}} 
+\index{GenericNode@{GenericNode}!set\_debug@{set\_debug}}
+\index{set\_debug@{set\_debug}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{set\_debug()}{set\_debug()}}
+{\footnotesize\ttfamily void Generic\+Node\+::set\+\_\+debug (\begin{DoxyParamCaption}\item[{bool}]{debug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGenericNode_a42caa921663417c7a2d48fef594a5d88}\label{classGenericNode_a42caa921663417c7a2d48fef594a5d88}} 
+\index{GenericNode@{GenericNode}!set\_log\_filter\_level\_json@{set\_log\_filter\_level\_json}}
+\index{set\_log\_filter\_level\_json@{set\_log\_filter\_level\_json}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{set\_log\_filter\_level\_json()}{set\_log\_filter\_level\_json()}}
+{\footnotesize\ttfamily bool Generic\+Node\+::set\+\_\+log\+\_\+filter\+\_\+level\+\_\+json (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{image__viewer_8cpp_ab701e3ac61a85b337ec5c1abaad6742d}{json}} \&}]{j,  }\item[{quill\+::\+Logger $\ast$}]{logger,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a5d0f994908063b6869f602b84a29c226}\label{classGenericNode_a5d0f994908063b6869f602b84a29c226}} 
+\index{GenericNode@{GenericNode}!setup\_cns\_socket@{setup\_cns\_socket}}
+\index{setup\_cns\_socket@{setup\_cns\_socket}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{setup\_cns\_socket()}{setup\_cns\_socket()}}
+{\footnotesize\ttfamily void Generic\+Node\+::setup\+\_\+cns\+\_\+socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_af1950452c0bedf0140c9db99896dd2e5}\label{classGenericNode_af1950452c0bedf0140c9db99896dd2e5}} 
+\index{GenericNode@{GenericNode}!setup\_publisher@{setup\_publisher}}
+\index{setup\_publisher@{setup\_publisher}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{setup\_publisher()}{setup\_publisher()}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$zmq\+::socket\+\_\+t$>$ Generic\+Node\+::setup\+\_\+publisher (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{topics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a272ee40ff6793a21b792018f0cbf8ceb}\label{classGenericNode_a272ee40ff6793a21b792018f0cbf8ceb}} 
+\index{GenericNode@{GenericNode}!setup\_subscriber@{setup\_subscriber}}
+\index{setup\_subscriber@{setup\_subscriber}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{setup\_subscriber()}{setup\_subscriber()}}
+{\footnotesize\ttfamily unique\+\_\+ptr$<$zmq\+::socket\+\_\+t$>$ Generic\+Node\+::setup\+\_\+subscriber (\begin{DoxyParamCaption}\item[{const string \&}]{topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Sets up a subscriber socket to listen on a specific topic. 
+
+This function contacts the Central Name Server (CNS) to retrieve the IP address and port associated with the specified topic. It then connects the provided subscriber socket to the retrieved endpoint and subscribes to the topic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic to subscribe to. \\
+\hline
+{\em new\+\_\+subscriber} & The ZMQ subscriber socket to be configured.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the topic lookup fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGenericNode_aa8638ff36e27afbcf26d392496537b94}\label{classGenericNode_aa8638ff36e27afbcf26d392496537b94}} 
+\index{GenericNode@{GenericNode}!start\_frame\_drop@{start\_frame\_drop}}
+\index{start\_frame\_drop@{start\_frame\_drop}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{start\_frame\_drop()}{start\_frame\_drop()}}
+{\footnotesize\ttfamily void Generic\+Node\+::start\+\_\+frame\+\_\+drop (\begin{DoxyParamCaption}\item[{zmq\+::socket\+\_\+t \&}]{sub\+\_\+socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Drop frames until they start arriving slower than 3ms apart. \mbox{\Hypertarget{classGenericNode_ab5942257206fbed9ad41cba3c52772b1}\label{classGenericNode_ab5942257206fbed9ad41cba3c52772b1}} 
+\index{GenericNode@{GenericNode}!unregister\_all\_services@{unregister\_all\_services}}
+\index{unregister\_all\_services@{unregister\_all\_services}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{unregister\_all\_services()}{unregister\_all\_services()}}
+{\footnotesize\ttfamily bool Generic\+Node\+::unregister\+\_\+all\+\_\+services (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+unregisters all currently registered services from the Central Name Server (CNS).
+
+This function iterates over all topics stored in m\+\_\+registered\+\_\+topics and attempts to unregister each one. If any service fails to unregister, the function returns false immediately. If all services are successfully unregistered, the function returns true.
+
+\begin{DoxyReturn}{Returns}
+true if all services are successfully unregistered, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGenericNode_acf989ec8ab3d61619a3f685d8957bc99}\label{classGenericNode_acf989ec8ab3d61619a3f685d8957bc99}} 
+\index{GenericNode@{GenericNode}!unregister\_service@{unregister\_service}}
+\index{unregister\_service@{unregister\_service}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{unregister\_service()}{unregister\_service()}}
+{\footnotesize\ttfamily bool Generic\+Node\+::unregister\+\_\+service (\begin{DoxyParamCaption}\item[{const string \&}]{topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+unregisters a service from the Central Name Server (CNS).
+
+This function constructs a deregistration request for the given topic and sends it to the CNS. It waits for a reply and checks if the deregistration was successful.
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & The topic of the service to be unregistered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the deregistration was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGenericNode_a1243a8b3e6a09ef210f9e56c509b0e93}\label{classGenericNode_a1243a8b3e6a09ef210f9e56c509b0e93}} 
+\index{GenericNode@{GenericNode}!debug@{debug}}
+\index{debug@{debug}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily bool Generic\+Node\+::debug = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a3114ef1653a9c98d084bb618fcee4ce3}\label{classGenericNode_a3114ef1653a9c98d084bb618fcee4ce3}} 
+\index{GenericNode@{GenericNode}!HEARTBEAT\_INTERVAL\_MS@{HEARTBEAT\_INTERVAL\_MS}}
+\index{HEARTBEAT\_INTERVAL\_MS@{HEARTBEAT\_INTERVAL\_MS}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{HEARTBEAT\_INTERVAL\_MS}{HEARTBEAT\_INTERVAL\_MS}}
+{\footnotesize\ttfamily const int Generic\+Node\+::\+HEARTBEAT\+\_\+\+INTERVAL\+\_\+\+MS = 1000\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_ad574a1743fa0a10697a9fdff85c6b140}\label{classGenericNode_ad574a1743fa0a10697a9fdff85c6b140}} 
+\index{GenericNode@{GenericNode}!m\_alignment\_log\_name@{m\_alignment\_log\_name}}
+\index{m\_alignment\_log\_name@{m\_alignment\_log\_name}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_alignment\_log\_name}{m\_alignment\_log\_name}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+alignment\+\_\+log\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aa27223e1b038135e6282aa8e7e761371}\label{classGenericNode_aa27223e1b038135e6282aa8e7e761371}} 
+\index{GenericNode@{GenericNode}!m\_alignment\_logger@{m\_alignment\_logger}}
+\index{m\_alignment\_logger@{m\_alignment\_logger}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_alignment\_logger}{m\_alignment\_logger}}
+{\footnotesize\ttfamily quill\+::\+Logger$\ast$ Generic\+Node\+::m\+\_\+alignment\+\_\+logger = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_af8941aa44d925217f1da44dd44fa3015}\label{classGenericNode_af8941aa44d925217f1da44dd44fa3015}} 
+\index{GenericNode@{GenericNode}!m\_atomic\_stop@{m\_atomic\_stop}}
+\index{m\_atomic\_stop@{m\_atomic\_stop}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_atomic\_stop}{m\_atomic\_stop}}
+{\footnotesize\ttfamily std\+::atomic$<$bool$>$ Generic\+Node\+::m\+\_\+atomic\+\_\+stop \{false\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aadf10b691f764c432c8b58ed7ab2b50d}\label{classGenericNode_aadf10b691f764c432c8b58ed7ab2b50d}} 
+\index{GenericNode@{GenericNode}!m\_cns\_ip@{m\_cns\_ip}}
+\index{m\_cns\_ip@{m\_cns\_ip}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_cns\_ip}{m\_cns\_ip}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+cns\+\_\+ip = \char`\"{}127.\+0.\+0.\+1\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aae4aa815077a516e5a391dd07e551e1b}\label{classGenericNode_aae4aa815077a516e5a391dd07e551e1b}} 
+\index{GenericNode@{GenericNode}!m\_cns\_port@{m\_cns\_port}}
+\index{m\_cns\_port@{m\_cns\_port}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_cns\_port}{m\_cns\_port}}
+{\footnotesize\ttfamily int Generic\+Node\+::m\+\_\+cns\+\_\+port = 5555\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a0e68b84ca7fae927800a6b8cd57c72fe}\label{classGenericNode_a0e68b84ca7fae927800a6b8cd57c72fe}} 
+\index{GenericNode@{GenericNode}!m\_cns\_socket@{m\_cns\_socket}}
+\index{m\_cns\_socket@{m\_cns\_socket}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_cns\_socket}{m\_cns\_socket}}
+{\footnotesize\ttfamily zmq\+::socket\+\_\+t Generic\+Node\+::m\+\_\+cns\+\_\+socket\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a55ce54bd02552925d45ac68561808783}\label{classGenericNode_a55ce54bd02552925d45ac68561808783}} 
+\index{GenericNode@{GenericNode}!m\_context@{m\_context}}
+\index{m\_context@{m\_context}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_context}{m\_context}}
+{\footnotesize\ttfamily zmq\+::context\+\_\+t Generic\+Node\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a3d93d0d8897d58d9559bbcfb04846c18}\label{classGenericNode_a3d93d0d8897d58d9559bbcfb04846c18}} 
+\index{GenericNode@{GenericNode}!m\_ip\_address@{m\_ip\_address}}
+\index{m\_ip\_address@{m\_ip\_address}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_ip\_address}{m\_ip\_address}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+ip\+\_\+address\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a63135279a6744c7fc14e445532a3fada}\label{classGenericNode_a63135279a6744c7fc14e445532a3fada}} 
+\index{GenericNode@{GenericNode}!m\_log\_name@{m\_log\_name}}
+\index{m\_log\_name@{m\_log\_name}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_log\_name}{m\_log\_name}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+log\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a0072a0e87b2e126fec7129a30e6ea112}\label{classGenericNode_a0072a0e87b2e126fec7129a30e6ea112}} 
+\index{GenericNode@{GenericNode}!m\_logger@{m\_logger}}
+\index{m\_logger@{m\_logger}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_logger}{m\_logger}}
+{\footnotesize\ttfamily quill\+::\+Logger$\ast$ Generic\+Node\+::m\+\_\+logger\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aa1ca4cbc7d8d7a2a2c826ce476cf80e4}\label{classGenericNode_aa1ca4cbc7d8d7a2a2c826ce476cf80e4}} 
+\index{GenericNode@{GenericNode}!m\_node\_id@{m\_node\_id}}
+\index{m\_node\_id@{m\_node\_id}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_node\_id}{m\_node\_id}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+node\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_ad6aff35358bcf7d0ad9876dfc5fc1d94}\label{classGenericNode_ad6aff35358bcf7d0ad9876dfc5fc1d94}} 
+\index{GenericNode@{GenericNode}!m\_node\_type@{m\_node\_type}}
+\index{m\_node\_type@{m\_node\_type}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_node\_type}{m\_node\_type}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+node\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_aacf77c74031365e41f51871a4c300c04}\label{classGenericNode_aacf77c74031365e41f51871a4c300c04}} 
+\index{GenericNode@{GenericNode}!m\_registered\_topics@{m\_registered\_topics}}
+\index{m\_registered\_topics@{m\_registered\_topics}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_registered\_topics}{m\_registered\_topics}}
+{\footnotesize\ttfamily vector$<$string$>$ Generic\+Node\+::m\+\_\+registered\+\_\+topics\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a1d36698d5ed4f26102e29ce4500f72cc}\label{classGenericNode_a1d36698d5ed4f26102e29ce4500f72cc}} 
+\index{GenericNode@{GenericNode}!m\_threads@{m\_threads}}
+\index{m\_threads@{m\_threads}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_threads}{m\_threads}}
+{\footnotesize\ttfamily vector$<$thread$>$ Generic\+Node\+::m\+\_\+threads\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a74d99ba181d746b467ba767fd93817af}\label{classGenericNode_a74d99ba181d746b467ba767fd93817af}} 
+\index{GenericNode@{GenericNode}!m\_topic@{m\_topic}}
+\index{m\_topic@{m\_topic}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{m\_topic}{m\_topic}}
+{\footnotesize\ttfamily string Generic\+Node\+::m\+\_\+topic\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGenericNode_a7443513267797a239b43d3e0eb94a004}\label{classGenericNode_a7443513267797a239b43d3e0eb94a004}} 
+\index{GenericNode@{GenericNode}!mtx@{mtx}}
+\index{mtx@{mtx}!GenericNode@{GenericNode}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily std\+::mutex Generic\+Node\+::mtx\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cpp/src/\mbox{\hyperlink{node_8hpp}{node.\+hpp}}\end{DoxyCompactItemize}

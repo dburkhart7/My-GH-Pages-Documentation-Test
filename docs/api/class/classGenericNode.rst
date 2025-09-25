@@ -1,0 +1,4 @@
+Class GenericNode
+=================
+
+.. doxygenclass:: GenericNode

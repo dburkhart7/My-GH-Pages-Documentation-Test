@@ -1,0 +1,49 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - gh-documentation
+  pull_request:
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install system dependencies (Doxygen & Graphviz)
+        run: |
+          sudo apt update
+          sudo apt install -y doxygen graphviz
+
+      - name: Install Python dependencies (Sphinx, Breathe, Theme)
+        run: |
+          pip install sphinx breathe sphinx_rtd_theme
+
+      - name: Generate Doxygen XML
+        run: |
+          doxygen docs/Doxyfile
+
+      - name: Generate API .rst files with breathe-apidoc
+        run: |
+          cd docs
+          breathe-apidoc -o api output/xml
+
+      - name: Build Sphinx HTML
+        run: |
+          cd docs
+          make html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html

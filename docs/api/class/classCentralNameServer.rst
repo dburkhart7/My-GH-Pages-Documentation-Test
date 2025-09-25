@@ -1,0 +1,4 @@
+Class CentralNameServer
+=======================
+
+.. doxygenclass:: CentralNameServer
