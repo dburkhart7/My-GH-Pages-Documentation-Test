@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File kinect.cpp &mdash; CANDOR Research Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="File node.hpp" href="node_8hpp.html" />
+    <link rel="prev" title="File image_viewer.cpp" href="image__viewer_8cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CANDOR Research Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api_reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../classlist.html">Class list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structlist.html">Struct list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespacelist.html">Namespace list</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../filelist.html">File list</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cns_8cpp.html">File cns.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cns_8hpp.html">File cns.hpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cns__main_8cpp.html">File cns_main.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constants_8hpp.html">File constants.hpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image__viewer_8cpp.html">File image_viewer.cpp</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">File kinect.cpp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv44json"><code class="docutils literal notranslate"><span class="pre">json</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv414signal_handleri"><code class="docutils literal notranslate"><span class="pre">signal_handler()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv44mainiPPc"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv412CAMERA_TOPIC"><code class="docutils literal notranslate"><span class="pre">CAMERA_TOPIC</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv411CAMERA_PORT"><code class="docutils literal notranslate"><span class="pre">CAMERA_PORT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv419EXPECTED_FRAME_RATE"><code class="docutils literal notranslate"><span class="pre">EXPECTED_FRAME_RATE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv418MAX_CAP_FAIL_COUNT"><code class="docutils literal notranslate"><span class="pre">MAX_CAP_FAIL_COUNT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv48g_logger"><code class="docutils literal notranslate"><span class="pre">g_logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv424KinectAzureFrameProducer"><code class="docutils literal notranslate"><span class="pre">KinectAzureFrameProducer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="node_8hpp.html">File node.hpp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides.html">Guides</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CANDOR Research Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api_reference.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../filelist.html">File list</a></li>
+      <li class="breadcrumb-item active">File kinect.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/file/kinect_8cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-kinect-cpp">
+<h1>File kinect.cpp<a class="headerlink" href="#file-kinect-cpp" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv44json">
+<span id="_CPPv34json"></span><span id="_CPPv24json"></span><span class="target" id="kinect_8cpp_1ab701e3ac61a85b337ec5c1abaad6742d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">json</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><br /></dt>
+<dd><p>Azure Kinect IR Frame Producer (C++ version)</p>
+<p>This application reads IR frames from an Azure Kinect camera and publishes them to a ZeroMQ socket. It’s designed to test whether the C++ Azure Kinect SDK can access the device over SSH where the Python version fails. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="kinect_8cpp_1a809a2d05cd42705a90fabdca97b0901b"></span><span class="sig-name descname"><span class="pre">std::atomic&lt;</span> <span class="pre">bool</span> <span class="pre">&gt;</span> <span class="pre">g_stop_requested</span> <span class="pre">(false)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414signal_handleri">
+<span id="_CPPv314signal_handleri"></span><span id="_CPPv214signal_handleri"></span><span id="signal_handler__i"></span><span class="target" id="kinect_8cpp_1a3b527c56ed133ee6815bfbc625e757af"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">signal_handler</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">signal</span></span><span class="sig-paren">)</span><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv44mainiPPc">
+<span id="_CPPv34mainiPPc"></span><span id="_CPPv24mainiPPc"></span><span id="main__i.cPP"></span><span class="target" id="kinect_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">main</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">argc</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">argv</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv44mainiPPc" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv412CAMERA_TOPIC">
+<span id="_CPPv312CAMERA_TOPIC"></span><span id="_CPPv212CAMERA_TOPIC"></span><span id="CAMERA_TOPIC__ssC"></span><span class="target" id="kinect_8cpp_1a2a6ad538f65c525f16ad9b4113a43338"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CAMERA_TOPIC</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;/camera/ir&quot;</span></span><a class="headerlink" href="#_CPPv412CAMERA_TOPIC" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411CAMERA_PORT">
+<span id="_CPPv311CAMERA_PORT"></span><span id="_CPPv211CAMERA_PORT"></span><span id="CAMERA_PORT__iC"></span><span class="target" id="kinect_8cpp_1a1e95172f710bac4c9f55947e22fa6d6e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CAMERA_PORT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">5555</span></span><a class="headerlink" href="#_CPPv411CAMERA_PORT" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv419EXPECTED_FRAME_RATE">
+<span id="_CPPv319EXPECTED_FRAME_RATE"></span><span id="_CPPv219EXPECTED_FRAME_RATE"></span><span id="EXPECTED_FRAME_RATE__iC"></span><span class="target" id="kinect_8cpp_1a70ed22f86ef541f049a9081672206f6f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EXPECTED_FRAME_RATE</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span><a class="headerlink" href="#_CPPv419EXPECTED_FRAME_RATE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv418MAX_CAP_FAIL_COUNT">
+<span id="_CPPv318MAX_CAP_FAIL_COUNT"></span><span id="_CPPv218MAX_CAP_FAIL_COUNT"></span><span id="MAX_CAP_FAIL_COUNT__iC"></span><span class="target" id="kinect_8cpp_1af3296f3475a84d034cdc51a48e4bc916"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_CAP_FAIL_COUNT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">15</span></span><a class="headerlink" href="#_CPPv418MAX_CAP_FAIL_COUNT" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv48g_logger">
+<span id="_CPPv38g_logger"></span><span id="_CPPv28g_logger"></span><span id="g_logger__quill::LoggerP"></span><span class="target" id="kinect_8cpp_1a1d6ab4efe553995cff37ba355bc34443"></span><span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">g_logger</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv48g_logger" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv424KinectAzureFrameProducer">
+<span id="_CPPv324KinectAzureFrameProducer"></span><span id="_CPPv224KinectAzureFrameProducer"></span><span id="KinectAzureFrameProducer"></span><span class="target" id="classKinectAzureFrameProducer"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KinectAzureFrameProducer</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../class/classGenericNode.html#_CPPv411GenericNode" title="GenericNode"><span class="n"><span class="pre">GenericNode</span></span></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer24KinectAzureFrameProducerERKNSt6stringEi8uint32_t8uint32_tbbPN5quill6LoggerE">
+<span id="_CPPv3N24KinectAzureFrameProducer24KinectAzureFrameProducerERKNSt6stringEi8uint32_t8uint32_tbbPN5quill6LoggerE"></span><span id="_CPPv2N24KinectAzureFrameProducer24KinectAzureFrameProducerERKNSt6stringEi8uint32_t8uint32_tbbPN5quill6LoggerE"></span><span id="KinectAzureFrameProducer::KinectAzureFrameProducer__ssCR.i.uint32_t.uint32_t.b.b.quill::LoggerP"></span><span class="target" id="classKinectAzureFrameProducer_1aa55b6806072ea3642a63c6a87bf69230"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KinectAzureFrameProducer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412CAMERA_TOPIC" title="CAMERA_TOPIC"><span class="n"><span class="pre">CAMERA_TOPIC</span></span></a>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411CAMERA_PORT" title="CAMERA_PORT"><span class="n"><span class="pre">CAMERA_PORT</span></span></a>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">device_index</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">frame_drop</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">master</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">save_images</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">logger</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer24KinectAzureFrameProducerERKNSt6stringEi8uint32_t8uint32_tbbPN5quill6LoggerE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducerD0Ev">
+<span id="_CPPv3N24KinectAzureFrameProducerD0Ev"></span><span id="_CPPv2N24KinectAzureFrameProducerD0Ev"></span><span id="KinectAzureFrameProducer::~KinectAzureFrameProducer"></span><span class="target" id="classKinectAzureFrameProducer_1add411b7c923ab53f1ffabea357f46d83"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~KinectAzureFrameProducer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducerD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer5startEv">
+<span id="_CPPv3N24KinectAzureFrameProducer5startEv"></span><span id="_CPPv2N24KinectAzureFrameProducer5startEv"></span><span id="KinectAzureFrameProducer::start"></span><span class="target" id="classKinectAzureFrameProducer_1a6511e2005fbded9197722da9a457935a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer5startEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer4stopEv">
+<span id="_CPPv3N24KinectAzureFrameProducer4stopEv"></span><span id="_CPPv2N24KinectAzureFrameProducer4stopEv"></span><span id="KinectAzureFrameProducer::stop"></span><span class="target" id="classKinectAzureFrameProducer_1aeef2d034dbb5efdf32d60ee2af176ce1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer4stopEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer12capture_loopEv">
+<span id="_CPPv3N24KinectAzureFrameProducer12capture_loopEv"></span><span id="_CPPv2N24KinectAzureFrameProducer12capture_loopEv"></span><span id="KinectAzureFrameProducer::capture_loop"></span><span class="target" id="classKinectAzureFrameProducer_1a1d8cfba4d02690bf8f9837a59e68c183"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capture_loop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer12capture_loopEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer14m_kinect_topicE">
+<span id="_CPPv3N24KinectAzureFrameProducer14m_kinect_topicE"></span><span id="_CPPv2N24KinectAzureFrameProducer14m_kinect_topicE"></span><span id="KinectAzureFrameProducer::m_kinect_topic__ss"></span><span class="target" id="classKinectAzureFrameProducer_1ad4055b776a0642d227ffa84d26119b14"></span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_kinect_topic</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer14m_kinect_topicE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer13device_index_E">
+<span id="_CPPv3N24KinectAzureFrameProducer13device_index_E"></span><span id="_CPPv2N24KinectAzureFrameProducer13device_index_E"></span><span id="KinectAzureFrameProducer::device_index___uint32_t"></span><span class="target" id="classKinectAzureFrameProducer_1a3765ad635f729af123d08853c0571bb2"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">device_index_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer13device_index_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer11frame_drop_E">
+<span id="_CPPv3N24KinectAzureFrameProducer11frame_drop_E"></span><span id="_CPPv2N24KinectAzureFrameProducer11frame_drop_E"></span><span id="KinectAzureFrameProducer::frame_drop___uint32_t"></span><span class="target" id="classKinectAzureFrameProducer_1ae066d5e171b9969402f0dd7d8caa01f2"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">frame_drop_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer11frame_drop_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer12save_images_E">
+<span id="_CPPv3N24KinectAzureFrameProducer12save_images_E"></span><span id="_CPPv2N24KinectAzureFrameProducer12save_images_E"></span><span id="KinectAzureFrameProducer::save_images___b"></span><span class="target" id="classKinectAzureFrameProducer_1a8a8d1b2c82d8bc005365c32c074cd5f2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">save_images_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer12save_images_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer7device_E">
+<span id="_CPPv3N24KinectAzureFrameProducer7device_E"></span><span id="_CPPv2N24KinectAzureFrameProducer7device_E"></span><span id="KinectAzureFrameProducer::device___k4a::device"></span><span class="target" id="classKinectAzureFrameProducer_1a81dd4e987c553332c022d62142efb9cf"></span><span class="n"><span class="pre">k4a</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">device</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">device_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer7device_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer8running_E">
+<span id="_CPPv3N24KinectAzureFrameProducer8running_E"></span><span id="_CPPv2N24KinectAzureFrameProducer8running_E"></span><span id="KinectAzureFrameProducer::running___std::atomic:b:"></span><span class="target" id="classKinectAzureFrameProducer_1a89e76ee63ef1e87c236cdf57c004fe80"></span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">atomic</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">running_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer8running_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer15capture_thread_E">
+<span id="_CPPv3N24KinectAzureFrameProducer15capture_thread_E"></span><span id="_CPPv2N24KinectAzureFrameProducer15capture_thread_E"></span><span id="KinectAzureFrameProducer::capture_thread___std::thread"></span><span class="target" id="classKinectAzureFrameProducer_1a954ad93d777f96d31be7af3430c16d95"></span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">capture_thread_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer15capture_thread_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N24KinectAzureFrameProducer7socket_E">
+<span id="_CPPv3N24KinectAzureFrameProducer7socket_E"></span><span id="_CPPv2N24KinectAzureFrameProducer7socket_E"></span><span id="KinectAzureFrameProducer::socket___unique_ptr:zmq::socket_t:"></span><span class="target" id="classKinectAzureFrameProducer_1ae6965992426ca621f0c1d2f629d9c1b9"></span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">socket_</span></span></span><a class="headerlink" href="#_CPPv4N24KinectAzureFrameProducer7socket_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="image__viewer_8cpp.html" class="btn btn-neutral float-left" title="File image_viewer.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="node_8hpp.html" class="btn btn-neutral float-right" title="File node.hpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dalton Burkhart.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

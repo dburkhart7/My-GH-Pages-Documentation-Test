@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File node.hpp &mdash; CANDOR Research Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Guides" href="../../guides.html" />
+    <link rel="prev" title="File kinect.cpp" href="kinect_8cpp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CANDOR Research Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api_reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../classlist.html">Class list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../structlist.html">Struct list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../namespacelist.html">Namespace list</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../filelist.html">File list</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cns_8cpp.html">File cns.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cns_8hpp.html">File cns.hpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cns__main_8cpp.html">File cns_main.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="constants_8hpp.html">File constants.hpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image__viewer_8cpp.html">File image_viewer.cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="kinect_8cpp.html">File kinect.cpp</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">File node.hpp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv44json"><code class="docutils literal notranslate"><span class="pre">json</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv411GenericNode"><code class="docutils literal notranslate"><span class="pre">GenericNode</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guides.html">Guides</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CANDOR Research Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api_reference.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../filelist.html">File list</a></li>
+      <li class="breadcrumb-item active">File node.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/api/file/node_8hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-node-hpp">
+<h1>File node.hpp<a class="headerlink" href="#file-node-hpp" title="Link to this heading"></a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv44json">
+<span id="_CPPv34json"></span><span id="_CPPv24json"></span><span class="target" id="node_8hpp_1ab701e3ac61a85b337ec5c1abaad6742d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">json</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv411GenericNode">
+<span id="_CPPv311GenericNode"></span><span id="_CPPv211GenericNode"></span><span id="GenericNode"></span><span class="target" id="classGenericNode"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericNode</span></span></span><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;node.hpp&gt;</em></div>
+<p><a class="reference internal" href="#classGenericNode"><span class="std std-ref">GenericNode</span></a> Test description for a git push as well!!! Every Generic node has the following IO. </p>
+<p><ol class="loweralpha simple">
+<li><p>Subscriber to broadcast messages</p></li>
+<li><p>request socket for CNS lookups (to get a port and register with the CNS)</p></li>
+<li><p>Publisher to send out messages</p></li>
+<li><p>Subscriber to receive messages</p></li>
+</ol>
+</p>
+<p>Node identification<ol class="loweralpha simple">
+<li><p>Node type - [kinect | pcd | saver | UKF | etc]</p></li>
+<li><p>Node id (random id)</p></li>
+<li><p>Node name - [kinect_0 | pcd_0 | saver_5 | UKF_3 | etc] </p></li>
+</ol>
+</p>
+<p>Subclassed by <a class="reference internal" href="cns_8hpp.html#classCentralNameServer"><span class="std std-ref">CentralNameServer</span></a>, <a class="reference internal" href="image__viewer_8cpp.html#classImageViewer"><span class="std std-ref">ImageViewer</span></a>, <a class="reference internal" href="kinect_8cpp.html#classKinectAzureFrameProducer"><span class="std std-ref">KinectAzureFrameProducer</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode17init_generic_nodeE6string6string6string">
+<span id="_CPPv3N11GenericNode17init_generic_nodeE6string6string6string"></span><span id="_CPPv2N11GenericNode17init_generic_nodeE6string6string6string"></span><span id="GenericNode::init_generic_node__string.string.string"></span><span class="target" id="classGenericNode_1af284220e094418653d56602cd814b5fa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init_generic_node</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">node_type</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">node_id</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ip_address</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode17init_generic_nodeE6string6string6string" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode11GenericNodeE6string6string6string6string">
+<span id="_CPPv3N11GenericNode11GenericNodeE6string6string6string6string"></span><span id="_CPPv2N11GenericNode11GenericNodeE6string6string6string6string"></span><span id="GenericNode::GenericNode__string.string.string.string"></span><span class="target" id="classGenericNode_1a80e2c82ccc5d4f362b0a67c6eaee3a13"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericNode</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">node_type</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">node_id</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ip_address</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">m_cns_ip</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode11GenericNodeE6string6string6string6string" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNodeD0Ev">
+<span id="_CPPv3N11GenericNodeD0Ev"></span><span id="_CPPv2N11GenericNodeD0Ev"></span><span id="GenericNode::~GenericNode"></span><span class="target" id="classGenericNode_1ae97c1f46c781cbf09bfa7054097baa2a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~GenericNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNodeD0Ev" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode11init_loggerEPPN5quill6LoggerE6string">
+<span id="_CPPv3N11GenericNode11init_loggerEPPN5quill6LoggerE6string"></span><span id="_CPPv2N11GenericNode11init_loggerEPPN5quill6LoggerE6string"></span><span id="GenericNode::init_logger__quill::LoggerPP.string"></span><span class="target" id="classGenericNode_1ac623c64fa2b52e6bb691514131abb634"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init_logger</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">logger</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Initialize the logger for this node.</p>
+<p>This function sets up a logger with two sinks: a file sink and a console sink. The file sink writes to a file with the name of the node, and the console sink writes to the console. The log level is set to Info unless debug is true, in which case it is set to Debug. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode17publish_heartbeatEv">
+<span id="_CPPv3N11GenericNode17publish_heartbeatEv"></span><span id="_CPPv2N11GenericNode17publish_heartbeatEv"></span><span id="GenericNode::publish_heartbeat"></span><span class="target" id="classGenericNode_1a0cbd0e24e8c36df83f51f60d6b463de5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publish_heartbeat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Publishes a heartbeat message to <code class="docutils literal notranslate"><span class="pre">/{type}/{id}/heartbeat</span></code>. </p>
+<p>This function is an infinite loop that publishes a heartbeat message to the CNS at regular intervals. The heartbeat message contains the node type, node ID, and current state of the node. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode9set_debugEb">
+<span id="_CPPv3N11GenericNode9set_debugEb"></span><span id="_CPPv2N11GenericNode9set_debugEb"></span><span id="GenericNode::set_debug__b"></span><span class="target" id="classGenericNode_1a89a166641de55fe564ae2a517b2053f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_debug</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode9set_debugEb" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode18get_topic_endpointERK6stringR6string">
+<span id="_CPPv3N11GenericNode18get_topic_endpointERK6stringR6string"></span><span id="_CPPv2N11GenericNode18get_topic_endpointERK6stringR6string"></span><span id="GenericNode::get_topic_endpoint__stringCR.stringR"></span><span class="target" id="classGenericNode_1a1918a462ad509408d106dc2f16f4098e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_topic_endpoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">endpoint</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Contacts the Parameter server (CNS) to retrieve the IP address and port associated with the specified topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – The topic to lookup. </p></li>
+<li><p><strong>endpoint</strong> – The endpoint to be populated with the result. If the topic is not found, the endpoint will be empty. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the topic is found and the endpoint is populated, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode16start_frame_dropERN3zmq8socket_tE">
+<span id="_CPPv3N11GenericNode16start_frame_dropERN3zmq8socket_tE"></span><span id="_CPPv2N11GenericNode16start_frame_dropERN3zmq8socket_tE"></span><span id="GenericNode::start_frame_drop__zmq::socket_tR"></span><span class="target" id="classGenericNode_1aa8638ff36e27afbcf26d392496537b94"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start_frame_drop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sub_socket</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Drop frames until they start arriving slower than 3ms apart. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode16log_info_messageERKNSt6stringE">
+<span id="_CPPv3N11GenericNode16log_info_messageERKNSt6stringE"></span><span id="_CPPv2N11GenericNode16log_info_messageERKNSt6stringE"></span><span id="GenericNode::log_info_message__ssCR"></span><span class="target" id="classGenericNode_1a57a4b24d1167e30fa3fe636b570fd722"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_info_message</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode16log_info_messageERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode17log_debug_messageERKNSt6stringE">
+<span id="_CPPv3N11GenericNode17log_debug_messageERKNSt6stringE"></span><span id="_CPPv2N11GenericNode17log_debug_messageERKNSt6stringE"></span><span id="GenericNode::log_debug_message__ssCR"></span><span class="target" id="classGenericNode_1a0b4c39692f2000316497c6ab0bece455"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_debug_message</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode17log_debug_messageERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode19log_warning_messageERKNSt6stringE">
+<span id="_CPPv3N11GenericNode19log_warning_messageERKNSt6stringE"></span><span id="_CPPv2N11GenericNode19log_warning_messageERKNSt6stringE"></span><span id="GenericNode::log_warning_message__ssCR"></span><span class="target" id="classGenericNode_1adefc9d1e5b1a10d9217a4c400593de8e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_warning_message</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode19log_warning_messageERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode17log_error_messageERKNSt6stringE">
+<span id="_CPPv3N11GenericNode17log_error_messageERKNSt6stringE"></span><span id="_CPPv2N11GenericNode17log_error_messageERKNSt6stringE"></span><span id="GenericNode::log_error_message__ssCR"></span><span class="target" id="classGenericNode_1aaf5158671d363867457ffdcf3d3af1a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">log_error_message</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode17log_error_messageERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode16setup_cns_socketEv">
+<span id="_CPPv3N11GenericNode16setup_cns_socketEv"></span><span id="_CPPv2N11GenericNode16setup_cns_socketEv"></span><span id="GenericNode::setup_cns_socket"></span><span class="target" id="classGenericNode_1a5d0f994908063b6869f602b84a29c226"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_cns_socket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode16setup_cns_socketEv" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode12send_req_cnsERN3zmq9message_tE6string">
+<span id="_CPPv3N11GenericNode12send_req_cnsERN3zmq9message_tE6string"></span><span id="_CPPv2N11GenericNode12send_req_cnsERN3zmq9message_tE6string"></span><span id="GenericNode::send_req_cns__zmq::message_tR.string"></span><span class="target" id="classGenericNode_1aa7cb5c90c7e2774a9f97c93d9509e381"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">send_req_cns</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">message_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reply</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">request_str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode12send_req_cnsERN3zmq9message_tE6string" title="Link to this definition"></a><br /></dt>
+<dd><p>Sends a request/reply message to the cns. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode16register_serviceERK6stringi">
+<span id="_CPPv3N11GenericNode16register_serviceERK6stringi"></span><span id="_CPPv2N11GenericNode16register_serviceERK6stringi"></span><span id="GenericNode::register_service__stringCR.i"></span><span class="target" id="classGenericNode_1ab8ad0fca8ba95af121bcb5f8c698b18d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">register_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">port</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode16register_serviceERK6stringi" title="Link to this definition"></a><br /></dt>
+<dd><p>Registers a topic with the central name server (CNS). The CNS will store the IP address and port number of the topic so that other nodes can find and connect to it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – a string identifying the topic </p></li>
+<li><p><strong>port</strong> – the port number for the service </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the registration was successful, false if not </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode18unregister_serviceERK6string">
+<span id="_CPPv3N11GenericNode18unregister_serviceERK6string"></span><span id="_CPPv2N11GenericNode18unregister_serviceERK6string"></span><span id="GenericNode::unregister_service__stringCR"></span><span class="target" id="classGenericNode_1acf989ec8ab3d61619a3f685d8957bc99"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unregister_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode18unregister_serviceERK6string" title="Link to this definition"></a><br /></dt>
+<dd><p>unregisters a service from the Central Name Server (CNS).</p>
+<p>This function constructs a deregistration request for the given topic and sends it to the CNS. It waits for a reply and checks if the deregistration was successful.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>topic</strong> – The topic of the service to be unregistered. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>true if the deregistration was successful, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode23unregister_all_servicesEv">
+<span id="_CPPv3N11GenericNode23unregister_all_servicesEv"></span><span id="_CPPv2N11GenericNode23unregister_all_servicesEv"></span><span id="GenericNode::unregister_all_services"></span><span class="target" id="classGenericNode_1ab5942257206fbed9ad41cba3c52772b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unregister_all_services</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode23unregister_all_servicesEv" title="Link to this definition"></a><br /></dt>
+<dd><p>unregisters all currently registered services from the Central Name Server (CNS).</p>
+<p>This function iterates over all topics stored in m_registered_topics and attempts to unregister each one. If any service fails to unregister, the function returns false immediately. If all services are successfully unregistered, the function returns true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if all services are successfully unregistered, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode16setup_subscriberERK6string">
+<span id="_CPPv3N11GenericNode16setup_subscriberERK6string"></span><span id="_CPPv2N11GenericNode16setup_subscriberERK6string"></span><span id="GenericNode::setup_subscriber__stringCR"></span><span class="target" id="classGenericNode_1accdc63e95fe36709b0cb65a33068830b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_subscriber</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode16setup_subscriberERK6string" title="Link to this definition"></a><br /></dt>
+<dd><p>Sets up a subscriber socket to listen on a specific topic. </p>
+<p>This function contacts the Central Name Server (CNS) to retrieve the IP address and port associated with the specified topic. It then connects the provided subscriber socket to the retrieved endpoint and subscribes to the topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – The topic to subscribe to. </p></li>
+<li><p><strong>new_subscriber</strong> – The ZMQ subscriber socket to be configured.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n">std</span></a><span class="p">::</span><span class="n">runtime_error</span></span></span> – if the topic lookup fails. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode15setup_publisherE6vectorI6stringE">
+<span id="_CPPv3N11GenericNode15setup_publisherE6vectorI6stringE"></span><span id="_CPPv2N11GenericNode15setup_publisherE6vectorI6stringE"></span><span id="GenericNode::setup_publisher__vector:string:"></span><span class="target" id="classGenericNode_1aa8b572ac7945b551a5781fe37c1acc7f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">unique_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_publisher</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">topics</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode15setup_publisherE6vectorI6stringE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode25set_log_filter_level_jsonERK4jsonPN5quill6LoggerE6string">
+<span id="_CPPv3N11GenericNode25set_log_filter_level_jsonERK4jsonPN5quill6LoggerE6string"></span><span id="_CPPv2N11GenericNode25set_log_filter_level_jsonERK4jsonPN5quill6LoggerE6string"></span><span id="GenericNode::set_log_filter_level_json__jsonCR.quill::LoggerP.string"></span><span class="target" id="classGenericNode_1a42caa921663417c7a2d48fef594a5d88"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_log_filter_level_json</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="cns_8cpp.html#_CPPv44json" title="json"><span class="n"><span class="pre">json</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">j</span></span>, <span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">logger</span></span>, <span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11GenericNode25set_log_filter_level_jsonERK4jsonPN5quill6LoggerE6string" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode11m_node_typeE">
+<span id="_CPPv3N11GenericNode11m_node_typeE"></span><span id="_CPPv2N11GenericNode11m_node_typeE"></span><span id="GenericNode::m_node_type__string"></span><span class="target" id="classGenericNode_1ad6aff35358bcf7d0ad9876dfc5fc1d94"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_node_type</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode11m_node_typeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode9m_node_idE">
+<span id="_CPPv3N11GenericNode9m_node_idE"></span><span id="_CPPv2N11GenericNode9m_node_idE"></span><span id="GenericNode::m_node_id__string"></span><span class="target" id="classGenericNode_1aa1ca4cbc7d8d7a2a2c826ce476cf80e4"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_node_id</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode9m_node_idE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode9m_contextE">
+<span id="_CPPv3N11GenericNode9m_contextE"></span><span id="_CPPv2N11GenericNode9m_contextE"></span><span id="GenericNode::m_context__zmq::context_t"></span><span class="target" id="classGenericNode_1a55ce54bd02552925d45ac68561808783"></span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">context_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_context</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode9m_contextE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode12m_cns_socketE">
+<span id="_CPPv3N11GenericNode12m_cns_socketE"></span><span id="_CPPv2N11GenericNode12m_cns_socketE"></span><span id="GenericNode::m_cns_socket__zmq::socket_t"></span><span class="target" id="classGenericNode_1a0e68b84ca7fae927800a6b8cd57c72fe"></span><span class="n"><span class="pre">zmq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">socket_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_cns_socket</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode12m_cns_socketE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode7m_topicE">
+<span id="_CPPv3N11GenericNode7m_topicE"></span><span id="_CPPv2N11GenericNode7m_topicE"></span><span id="GenericNode::m_topic__string"></span><span class="target" id="classGenericNode_1a74d99ba181d746b467ba767fd93817af"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_topic</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode7m_topicE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode8m_cns_ipE">
+<span id="_CPPv3N11GenericNode8m_cns_ipE"></span><span id="_CPPv2N11GenericNode8m_cns_ipE"></span><span id="GenericNode::m_cns_ip__string"></span><span class="target" id="classGenericNode_1aadf10b691f764c432c8b58ed7ab2b50d"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_cns_ip</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;127.0.0.1&quot;</span></span><a class="headerlink" href="#_CPPv4N11GenericNode8m_cns_ipE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode10m_cns_portE">
+<span id="_CPPv3N11GenericNode10m_cns_portE"></span><span id="_CPPv2N11GenericNode10m_cns_portE"></span><span id="GenericNode::m_cns_port__i"></span><span class="target" id="classGenericNode_1aae4aa815077a516e5a391dd07e551e1b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_cns_port</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">5555</span></span><a class="headerlink" href="#_CPPv4N11GenericNode10m_cns_portE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode19m_registered_topicsE">
+<span id="_CPPv3N11GenericNode19m_registered_topicsE"></span><span id="_CPPv2N11GenericNode19m_registered_topicsE"></span><span id="GenericNode::m_registered_topics__vector:string:"></span><span class="target" id="classGenericNode_1aacf77c74031365e41f51871a4c300c04"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_registered_topics</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode19m_registered_topicsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode21HEARTBEAT_INTERVAL_MSE">
+<span id="_CPPv3N11GenericNode21HEARTBEAT_INTERVAL_MSE"></span><span id="_CPPv2N11GenericNode21HEARTBEAT_INTERVAL_MSE"></span><span id="GenericNode::HEARTBEAT_INTERVAL_MS__iC"></span><span class="target" id="classGenericNode_1a3114ef1653a9c98d084bb618fcee4ce3"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HEARTBEAT_INTERVAL_MS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1000</span></span><a class="headerlink" href="#_CPPv4N11GenericNode21HEARTBEAT_INTERVAL_MSE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode13m_atomic_stopE">
+<span id="_CPPv3N11GenericNode13m_atomic_stopE"></span><span id="_CPPv2N11GenericNode13m_atomic_stopE"></span><span id="GenericNode::m_atomic_stop__std::atomic:b:"></span><span class="target" id="classGenericNode_1af8941aa44d925217f1da44dd44fa3015"></span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">atomic</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_atomic_stop</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N11GenericNode13m_atomic_stopE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode3mtxE">
+<span id="_CPPv3N11GenericNode3mtxE"></span><span id="_CPPv2N11GenericNode3mtxE"></span><span id="GenericNode::mtx__std::mutex"></span><span class="target" id="classGenericNode_1a7443513267797a239b43d3e0eb94a004"></span><a class="reference internal" href="cns_8cpp.html#_CPPv4St" title="std"><span class="n"><span class="pre">std</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mtx</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode3mtxE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode9m_threadsE">
+<span id="_CPPv3N11GenericNode9m_threadsE"></span><span id="_CPPv2N11GenericNode9m_threadsE"></span><span id="GenericNode::m_threads__vector:thread:"></span><span class="target" id="classGenericNode_1a1d36698d5ed4f26102e29ce4500f72cc"></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_threads</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode9m_threadsE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode8m_loggerE">
+<span id="_CPPv3N11GenericNode8m_loggerE"></span><span id="_CPPv2N11GenericNode8m_loggerE"></span><span id="GenericNode::m_logger__quill::LoggerP"></span><span class="target" id="classGenericNode_1a0072a0e87b2e126fec7129a30e6ea112"></span><span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_logger</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode8m_loggerE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode18m_alignment_loggerE">
+<span id="_CPPv3N11GenericNode18m_alignment_loggerE"></span><span id="_CPPv2N11GenericNode18m_alignment_loggerE"></span><span id="GenericNode::m_alignment_logger__quill::LoggerP"></span><span class="target" id="classGenericNode_1aa27223e1b038135e6282aa8e7e761371"></span><span class="n"><span class="pre">quill</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Logger</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_alignment_logger</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N11GenericNode18m_alignment_loggerE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode5debugE">
+<span id="_CPPv3N11GenericNode5debugE"></span><span id="_CPPv2N11GenericNode5debugE"></span><span id="GenericNode::debug__b"></span><span class="target" id="classGenericNode_1a1243a8b3e6a09ef210f9e56c509b0e93"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N11GenericNode5debugE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode10m_log_nameE">
+<span id="_CPPv3N11GenericNode10m_log_nameE"></span><span id="_CPPv2N11GenericNode10m_log_nameE"></span><span id="GenericNode::m_log_name__string"></span><span class="target" id="classGenericNode_1a63135279a6744c7fc14e445532a3fada"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_log_name</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode10m_log_nameE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode20m_alignment_log_nameE">
+<span id="_CPPv3N11GenericNode20m_alignment_log_nameE"></span><span id="_CPPv2N11GenericNode20m_alignment_log_nameE"></span><span id="GenericNode::m_alignment_log_name__string"></span><span class="target" id="classGenericNode_1ad574a1743fa0a10697a9fdff85c6b140"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_alignment_log_name</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode20m_alignment_log_nameE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11GenericNode12m_ip_addressE">
+<span id="_CPPv3N11GenericNode12m_ip_addressE"></span><span id="_CPPv2N11GenericNode12m_ip_addressE"></span><span id="GenericNode::m_ip_address__string"></span><span class="target" id="classGenericNode_1a3d93d0d8897d58d9559bbcfb04846c18"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_ip_address</span></span></span><a class="headerlink" href="#_CPPv4N11GenericNode12m_ip_addressE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="kinect_8cpp.html" class="btn btn-neutral float-left" title="File kinect.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../guides.html" class="btn btn-neutral float-right" title="Guides" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dalton Burkhart.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

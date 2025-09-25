@@ -1,0 +1,4 @@
+Struct NodeInfo
+===============
+
+.. doxygenstruct:: NodeInfo

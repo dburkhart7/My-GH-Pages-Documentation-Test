@@ -1,0 +1,4 @@
+Class KinectAzureFrameProducer
+==============================
+
+.. doxygenclass:: KinectAzureFrameProducer
