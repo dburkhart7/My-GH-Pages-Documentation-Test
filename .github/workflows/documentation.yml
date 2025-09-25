@@ -3,7 +3,7 @@ name: Build and Deploy Docs
 on:
   push:
     branches:
-      - gh-documentation
+      - master
   pull_request:
 
 jobs:
