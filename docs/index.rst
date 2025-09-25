@@ -8,9 +8,9 @@ Welcome to the CANDOR Research API documentation.
 
 This site contains:
 
-- High-level usage guides
-- Auto-generated API references
-- Internal architecture documentation
+- High-level usage guides!!!
+- Auto-generated API references!!!
+- Internal architecture documentation!!!
 
 .. toctree::
    :maxdepth: 3
